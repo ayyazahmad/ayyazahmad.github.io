@@ -1,0 +1,170 @@
+/* ============================================
+   RESPONSIVE DESIGN
+   Mobile-First approach
+   ============================================ */
+
+/* Tablet (768px and up) */
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .projects-grid,
+  .payment-grid,
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop (1024px and up) */
+@media (min-width: 1024px) {
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .projects-grid,
+  .projects-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .payment-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Large Desktop (1440px and up) */
+@media (min-width: 1440px) {
+  body {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .projects-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Small Mobile (320px - 480px) */
+@media (max-width: 480px) {
+  :root {
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+  }
+
+  .hero {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav {
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+  }
+
+  .nav a {
+    padding: var(--spacing-sm);
+    font-size: 0.85rem;
+  }
+
+  .tabs {
+    flex-direction: column;
+  }
+
+  .tab-btn {
+    width: 100%;
+  }
+
+  .payment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .theme-switcher-container {
+    top: 10px;
+    right: 10px;
+  }
+
+  .theme-switch-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .theme-menu {
+    min-width: 180px;
+  }
+}
+
+/* Landscape orientation */
+@media (max-height: 600px) and (orientation: landscape) {
+  .hero {
+    padding: var(--spacing-lg);
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+  }
+}
+
+/* Print styles */
+@media print {
+  .theme-switcher-container,
+  .nav {
+    display: none;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  .card {
+    page-break-inside: avoid;
+  }
+}
+
+/* Dark mode preference */
+@media (prefers-color-scheme: dark) {
+  /* Already handled by theme system */
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: more) {
+  .card {
+    border-width: 2px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    text-decoration: underline;
+  }
+}
