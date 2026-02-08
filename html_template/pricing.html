@@ -75,7 +75,7 @@
             <!-- End Top Search -->
 
 
-            <div class="container nav-box d-flex justify-content-between align-items-center">
+            <div class="container nav-box d-flex justify-content-between align-items-center">            
 
                 <!-- Start Header Navigation -->
                 <div class="navbar-header">
@@ -83,10 +83,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
                     <a class="navbar-brand" href="index.html">
-                        <img src="assets/img/logo/Logo for Light Theme.png" alt="AzAd Logo" class="logo-light"
-                            style="height: 45px;">
-                        <img src="assets/img/logo/Logo for Dark Theme.png" alt="AzAd Logo" class="logo-dark"
-                            style="height: 45px;">
+                        <img src="assets/img/logo.png" class="logo" alt="Logo">
                     </a>
                 </div>
                 <!-- End Header Navigation -->
@@ -98,12 +95,30 @@
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                         <i class="fa fa-times"></i>
                     </button>
-
+                    
                     <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="donation.html">Donate</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle active" data-toggle="dropdown" >Home</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="index.html">Home Version Light</a></li>
+                                <li><a href="index-dark.html">Home Version Dark</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="smooth-menu" href="service.html">Services</a>
+                        </li>
+                        <li>
+                            <a class="smooth-menu" href="projects.html">Portfolio</a>
+                        </li>
+                        <li>
+                            <a class="smooth-menu" href="resume.html">Resume</a>
+                        </li>
+                        <li>
+                            <a class="smooth-menu" href="pricing.html">Pricing</a>
+                        </li>
+                        <li>
+                            <a class="smooth-menu" href="contact.html">contact</a>
+                        </li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
 
@@ -113,14 +128,14 @@
                         <div class="attr-nav attr-box">
                             <ul>
                                 <li class="button">
-                                    <a href="donation.html"><span>Support Us</span> <i class="fas fa-heart"></i></a>
+                                    <a href="#">Let's Talk <i class="fas fa-comment-alt"></i></a>
                                 </li>
                             </ul>
                         </div>
                         <!-- End Atribute Navigation -->
                     </div>
                 </div>
-            </div>
+            </div>   
 
             <!-- Overlay screen for menu -->
             <div class="overlay-screen"></div>
@@ -184,16 +199,15 @@
                                 <li>Responsive Design</li>
                             </ul>
                             <div class="button mt-30">
-                                <a class="btn-style-regular" href="#contact"><span>Order Now</span> <i
-                                        class="fas fa-arrow-right"></i></a>
+                                <a class="btn-style-regular" href="#contact"><span>Order Now</span> <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
-
+                        
                     </div>
                 </div>
                 <!-- End Single Item -->
                 <!-- Single Item -->
-                <div class="col-lg-6 pricing-one-single">
+                 <div class="col-lg-6 pricing-one-single">
                     <div class="pricing-style-one wow fadeInUp" data-wow-delay="200ms">
                         <div class="pricing-top">
                             <div class="right">
@@ -219,12 +233,11 @@
                                 <li>Responsive Design</li>
                             </ul>
                             <div class="button mt-30">
-                                <a class="btn-style-regular btn-border" href="#contact"><span>Order Now</span> <i
-                                        class="fas fa-arrow-right"></i></a>
+                                <a class="btn-style-regular btn-border" href="#contact"><span>Order Now</span> <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
-                </div>
+                 </div>
                 <!-- End Single Item -->
             </div>
         </div>
@@ -241,9 +254,10 @@
                         <a href="#" class="footer-logot"><img src="assets/img/logo.png" alt="Image Not Found"></a>
                         <ul class="foter-menu">
                             <li><a href="index.html">Home</a></li>
-                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="service.html">Services</a></li>
+                            <li><a href="projects.html">Portfolio</a></li>
+                            <li><a href="blog-with-sidebar.html">Blog</a></li>
                             <li><a href="contact.html">Contact</a></li>
-                            <li><a href="donation.html">Donate</a></li>
                         </ul>
                         <p>Copyright &copy; 2024 Antux. All Rights Reserved</p>
                     </div>
@@ -252,7 +266,7 @@
         </div>
     </footer>
     <!-- End Footer -->
-
+    
     <!-- jQuery Frameworks
     ============================================= -->
     <script src="assets/js/jquery-3.6.0.min.js"></script>
@@ -277,5 +291,4 @@
     <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>
