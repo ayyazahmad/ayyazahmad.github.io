@@ -307,20 +307,42 @@
 
 
 	/* ==================================================
-		# Scroll to Top
+		# Scroll to Top - Recreated
 	 ===============================================*/
-	$(window).scroll(function () {
-		if ($(this).scrollTop() > 300) {
-			$('.scroll-to-top').addClass('active');
-		} else {
-			$('.scroll-to-top').removeClass('active');
+	
+	function initScrollToTop() {
+		let scrollBtn = document.querySelector('.scroll-to-top');
+		
+		// Show/hide button on scroll
+		window.addEventListener('scroll', function() {
+			if (window.scrollY > 300) {
+				if (scrollBtn) {
+					scrollBtn.classList.add('active');
+				}
+			} else {
+				if (scrollBtn) {
+					scrollBtn.classList.remove('active');
+				}
+			}
+		});
+		
+		// Scroll to top on click
+		if (scrollBtn) {
+			scrollBtn.addEventListener('click', function(e) {
+				e.preventDefault();
+				e.stopPropagation();
+				window.scrollTo({
+					top: 0,
+					behavior: 'smooth'
+				});
+			});
 		}
-	});
+	}
+	
+	// Initialize immediately and also on page load
+	initScrollToTop();
+	window.addEventListener('load', initScrollToTop);
 
-	$('.scroll-to-top').click(function () {
-		window.scrollTo({ top: 0, behavior: 'smooth' });
-		return false;
-	});
 
 
 	$(window).scroll(function () {
@@ -338,47 +360,77 @@
 
 
 
+
 	/* ==================================================
 		Preloader Js
 	================================================== */
-	const svg = document.getElementById("preloaderSvg");
-	const svgText = document.querySelector(
-		".hero-section .intro_text svg text"
-	);
-	const tl = gsap.timeline({
-		onComplete: startStrokeAnimation,
-	});
-	const curve = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
-	const flat = "M0 2S175 1 500 1s500 1 500 1V0H0Z";
+	
+	// Set timeout to force hide preloader after 3 seconds
+	setTimeout(function() {
+		const preloader = document.querySelector(".preloader");
+		if (preloader) {
+			preloader.style.display = "none";
+			preloader.style.zIndex = "-1";
+		}
+	}, 3000);
+	
+	// Auto-hide preloader on page load
+	window.addEventListener('load', function() {
+		const preloader = document.querySelector(".preloader");
+		if (preloader) {
+			// Check if this is homepage with hero section
+			const hasHeroSection = document.querySelector(".hero-section") !== null;
+			
+			if (!hasHeroSection) {
+				// For non-homepage pages, just hide it immediately
+				preloader.style.display = "none";
+				preloader.style.zIndex = "-1";
+			} else {
+				// For homepage, use animation
+				const svg = document.getElementById("preloaderSvg");
+				const svgText = document.querySelector(".hero-section .intro_text svg text");
+				const tl = gsap.timeline({
+					onComplete: startStrokeAnimation,
+				});
+				const curve = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
+				const flat = "M0 2S175 1 500 1s500 1 500 1V0H0Z";
 
-	tl.to(".preloader-heading .load-text , .preloader-heading .cont", {
-		delay: 1.5,
-		y: -100,
-		opacity: 0,
-	});
-	tl.to(svg, {
-		duration: 0.5,
-		attr: { d: curve },
-		ease: "power2.easeIn",
-	}).to(svg, {
-		duration: 0.5,
-		attr: { d: flat },
-		ease: "power2.easeOut",
-	});
-	tl.to(".preloader", {
-		y: -1500,
-	});
-	tl.to(".preloader", {
-		zIndex: -1,
-		display: "none",
+				tl.to(".preloader-heading .load-text , .preloader-heading .cont", {
+					delay: 1.5,
+					y: -100,
+					opacity: 0,
+				});
+				
+				if (svg) {
+					tl.to(svg, {
+						duration: 0.5,
+						attr: { d: curve },
+						ease: "power2.easeIn",
+					}).to(svg, {
+						duration: 0.5,
+						attr: { d: flat },
+						ease: "power2.easeOut",
+					});
+				}
+				
+				tl.to(".preloader", {
+					y: -1500,
+				});
+				tl.to(".preloader", {
+					zIndex: -1,
+					display: "none",
+				});
+			}
+		}
 	});
 
 	function startStrokeAnimation() {
+		const svgText = document.querySelector(".hero-section .intro_text svg text");
 		if (svgText) {
-			// Add a class or directly apply styles to trigger the stroke animation
 			svgText.classList.add("animate-stroke");
 		}
 	}
+
 
 
 })(jQuery); // End jQuery
