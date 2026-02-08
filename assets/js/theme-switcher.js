@@ -9,8 +9,9 @@ class ThemeSwitcher {
     this.currentScheme = this.loadScheme();
     this.applyTheme(this.currentTheme);
     this.applyScheme(this.currentScheme);
-    this.createSwitcher();
-    this.attachEventListeners();
+    // DO NOT create visible UI buttons - theme switching happens in background
+    // this.createSwitcher();
+    // this.attachEventListeners();
   }
 
   loadTheme() {
