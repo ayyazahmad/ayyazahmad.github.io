@@ -59,30 +59,27 @@
       padding: 0 !important;
     }
 
-    /* Label and value helpers inside details-box */
-    .details-box .label {
-      margin: 0 !important;
-      padding: 0 !important;
-      font-weight: 600;
-      display: block;
+    /* Label divs: inline so they sit next to values */
+    .details-box > div:has(> strong) {
+      display: inline !important;
+      margin-right: 0.2rem !important;
     }
 
-    .details-box .value {
-      margin: 0 !important;
-      padding: 0 !important;
-      display: inline-flex;
+    /* Value divs: inline-flex with proper vertical alignment for copy icons */
+    .details-box > div:has(> span) {
+      display: inline-flex !important;
       align-items: center;
       gap: 8px;
+      width: 100%;
+      margin-bottom: 0.3rem !important;
     }
 
-    /* Ensure any <strong> used as label has no extra bottom spacing */
-    .details-box strong { display: inline-block; margin: 0 !important; }
-
-    /* Make label divs inline-block to sit adjacent to values */
-    .details-box div:has(> strong) {
-      display: inline-block !important;
-      margin-right: 0.3rem !important;
-      margin-bottom: 0.3rem !important;
+    /* Copy icons: proper inline alignment, no superscript */
+    .details-box i.far.fa-copy {
+      vertical-align: middle !important;
+      font-size: 0.85rem;
+      display: inline;
+      margin: 0 !important;
     }
     .service-style-one-item {
       transition: all 0.3s ease;
