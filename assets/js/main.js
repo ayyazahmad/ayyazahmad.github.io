@@ -292,14 +292,24 @@
 					data: form.serialize(),
 					dataType: "json",
 					success: function (response) {
-						var successHtml = "<div class='alert alert-success'><h3>Email Sent Successfully.</h3><p>Thank you, your message has been submitted.</p></div>";
-						messageBox.html(successHtml);
-						messageBox.slideDown('slow');
-						$('.contact-form img.loader').fadeOut('slow', function () {
-							$(this).remove();
-						});
-						submitBtn.removeAttr('disabled');
-						form[0].reset();
+						if (response.result === "success") {
+							var successHtml = "<div class='alert alert-success'><h3>Email Sent Successfully.</h3><p>Thank you, your message has been submitted.</p></div>";
+							messageBox.html(successHtml);
+							messageBox.slideDown('slow');
+							$('.contact-form img.loader').fadeOut('slow', function () {
+								$(this).remove();
+							});
+							submitBtn.removeAttr('disabled');
+							form[0].reset();
+						} else {
+							var errorHtml = "<div class='alert alert-error'>Oops! " + (response.error || "Failed to send message.") + "</div>";
+							messageBox.html(errorHtml);
+							messageBox.slideDown('slow');
+							$('.contact-form img.loader').fadeOut('slow', function () {
+								$(this).remove();
+							});
+							submitBtn.removeAttr('disabled');
+						}
 					},
 					error: function (response) {
 						var errorHtml = "<div class='alert alert-error'>Oops! Failed to send message. Please try again later.</div>";
