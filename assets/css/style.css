@@ -4119,6 +4119,7 @@ ul.list-style-one li::after {
 
 .funfact-style-two-item {
 	padding: 50px 37px;
+	min-height: 280px;
 	background: linear-gradient(130deg, var(--white) 20%, #ECF0F3 100%);
 	border: 1px solid rgba(255, 255, 255, 0.8);
 	border-radius: 150px;
