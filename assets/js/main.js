@@ -301,6 +301,11 @@
 							});
 							submitBtn.removeAttr('disabled');
 							form[0].reset();
+
+							// Auto-hide success message after 5 seconds
+							setTimeout(function () {
+								messageBox.slideUp('slow');
+							}, 5000);
 						} else {
 							var errorHtml = "<p style='color: #dc3545; margin-top: 15px; font-weight: 600;'>Oops! " + (response.error || "Failed to send message.") + "</p>";
 							messageBox.html(errorHtml);
