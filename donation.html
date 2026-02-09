@@ -9,10 +9,10 @@
     <meta name="description" content="Antux - Personal Portfolio Template">
 
     <!-- ========== Page Title ========== -->
-    <title>Antux - Personal Portfolio Template</title>
+    <title>Donation | AzAd</title>
 
     <!-- ========== Favicon Icon ========== -->
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/img/logo/icon.png" type="image/x-icon">
 
     <!-- ========== Start Stylesheet ========== -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -461,11 +461,24 @@
     <script src="assets/js/config.js"></script>
     <script src="assets/js/main.js"></script>
     <!-- Start Scroll Top -->
-    <div class="scroll-to-top">
+    <div class="scroll-to-top" style="position: fixed; bottom: 30px; right: 30px; z-index: 9999; width: 45px; height: 45px; line-height: 45px; text-align: center; background: #007bff; color: #fff; border-radius: 50%; cursor: pointer; opacity: 0; visibility: hidden; transition: all 0.3s ease-in-out; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);" onmouseover="this.style.background='#0056b3'; this.style.transform='translateY(-3px)';" onmouseout="this.style.background='#007bff'; this.style.transform='translateY(0)';">
         <span class="scroll-icon">
-            <i class="fa fa-arrow-up"></i>
+            <i class="fa fa-arrow-up" style="font-size: 18px;"></i>
         </span>
     </div>
+    <script>
+        // Add active styles when scrolling
+        window.addEventListener('scroll', function() {
+            let scrollBtn = document.querySelector('.scroll-to-top');
+            if (window.scrollY > 300) {
+                scrollBtn.style.opacity = '1';
+                scrollBtn.style.visibility = 'visible';
+            } else {
+                scrollBtn.style.opacity = '0';
+                scrollBtn.style.visibility = 'hidden';
+            }
+        });
+    </script>
     <!-- End Scroll Top -->
     <script src="assets/js/theme-switcher.js"></script>
 
