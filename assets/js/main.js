@@ -270,12 +270,11 @@
 			Contact Form Validations
 		================================================== */
 		/* ==================================================
-			Contact Form Validations (Formspree AJAX)
+			Contact Form Validations (EmailJS)
 		================================================== */
 		$('.contact-form').submit(function (e) {
 			e.preventDefault();
 			var form = $(this);
-			var action = form.attr('action');
 			var messageBox = $("#message");
 			var submitBtn = $('#submit');
 
@@ -286,15 +285,10 @@
 					.after('<img src="assets/img/ajax-loader.gif" class="loader" />')
 					.attr('disabled', 'disabled');
 
-				$.ajax({
-					type: "POST",
-					url: action,
-					data: form.serialize(),
-					dataType: "json",
-					headers: {
-						'Accept': 'application/json'
-					},
-					success: function (response) {
+				// EmailJS Service ID and Template ID
+				emailjs.sendForm('service_0eq4hms', 'template_erpll34', this)
+					.then(() => {
+						// Success
 						var successHtml = "<div class='alert alert-success'><h3>Email Sent Successfully.</h3><p>Thank you, your message has been submitted.</p></div>";
 						messageBox.html(successHtml);
 						messageBox.slideDown('slow');
@@ -302,22 +296,18 @@
 							$(this).remove();
 						});
 						submitBtn.removeAttr('disabled');
-						form[0].reset(); // Clear the form
-					},
-					error: function (response) {
-						var errorMsg = "Oops! There was a problem submitting your form.";
-						if (response.responseJSON && response.responseJSON.errors) {
-							errorMsg = response.responseJSON.errors.map(function (error) { return error.message; }).join(", ");
-						}
-						var errorHtml = "<div class='alert alert-error'>" + errorMsg + "</div>";
+						form[0].reset();
+					}, (error) => {
+						// Error
+						var errorHtml = "<div class='alert alert-error'>Oops! Failed to send message. Please try again later.</div>";
 						messageBox.html(errorHtml);
 						messageBox.slideDown('slow');
 						$('.contact-form img.loader').fadeOut('slow', function () {
 							$(this).remove();
 						});
 						submitBtn.removeAttr('disabled');
-					}
-				});
+						console.log('FAILED...', error);
+					});
 			});
 		});
 
