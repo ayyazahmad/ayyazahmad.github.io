@@ -275,6 +275,7 @@
 		$('.contact-form').submit(function (e) {
 			e.preventDefault();
 			var form = $(this);
+			var action = form.attr('action');
 			var messageBox = $("#message");
 			var submitBtn = $('#submit');
 
@@ -285,10 +286,12 @@
 					.after('<img src="assets/img/ajax-loader.gif" class="loader" />')
 					.attr('disabled', 'disabled');
 
-				// EmailJS Service ID and Template ID
-				emailjs.sendForm('service_0eq4hms', 'template_erpll34', this)
-					.then(() => {
-						// Success
+				$.ajax({
+					type: "POST",
+					url: action,
+					data: form.serialize(),
+					dataType: "json",
+					success: function (response) {
 						var successHtml = "<div class='alert alert-success'><h3>Email Sent Successfully.</h3><p>Thank you, your message has been submitted.</p></div>";
 						messageBox.html(successHtml);
 						messageBox.slideDown('slow');
@@ -297,8 +300,8 @@
 						});
 						submitBtn.removeAttr('disabled');
 						form[0].reset();
-					}, (error) => {
-						// Error
+					},
+					error: function (response) {
 						var errorHtml = "<div class='alert alert-error'>Oops! Failed to send message. Please try again later.</div>";
 						messageBox.html(errorHtml);
 						messageBox.slideDown('slow');
@@ -306,9 +309,9 @@
 							$(this).remove();
 						});
 						submitBtn.removeAttr('disabled');
-						console.log('FAILED...', error);
-						alert("EmailJS Error: " + JSON.stringify(error));
-					});
+						console.log('FAILED...', response);
+					}
+				});
 			});
 		});
 
