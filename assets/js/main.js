@@ -270,42 +270,56 @@
 			Contact Form Validations
 		================================================== */
 		/* ==================================================
-			Contact Form Validations
+			Contact Form Validations (Formspree AJAX)
 		================================================== */
-		/*
-		$('.contact-form').each(function () {
-			var formInstance = $(this);
-			formInstance.submit(function () {
+		$('.contact-form').submit(function (e) {
+			e.preventDefault();
+			var form = $(this);
+			var action = form.attr('action');
+			var messageBox = $("#message");
+			var submitBtn = $('#submit');
 
-				var action = $(this).attr('action');
+			messageBox.slideUp(750, function () {
+				messageBox.hide();
 
-				$("#message").slideUp(750, function () {
-					$('#message').hide();
+				submitBtn
+					.after('<img src="assets/img/ajax-loader.gif" class="loader" />')
+					.attr('disabled', 'disabled');
 
-					$('#submit')
-						.after('<img src="assets/img/ajax-loader.gif" class="loader" />')
-						.attr('disabled', 'disabled');
-
-					$.post(action, {
-						name: $('#name').val(),
-						email: $('#email').val(),
-						phone: $('#phone').val(),
-						comments: $('#comments').val()
+				$.ajax({
+					type: "POST",
+					url: action,
+					data: form.serialize(),
+					dataType: "json",
+					headers: {
+						'Accept': 'application/json'
 					},
-						function (data) {
-							document.getElementById('message').innerHTML = data;
-							$('#message').slideDown('slow');
-							$('.contact-form img.loader').fadeOut('slow', function () {
-								$(this).remove()
-							});
-							$('#submit').removeAttr('disabled');
+					success: function (response) {
+						var successHtml = "<div class='alert alert-success'><h3>Email Sent Successfully.</h3><p>Thank you, your message has been submitted.</p></div>";
+						messageBox.html(successHtml);
+						messageBox.slideDown('slow');
+						$('.contact-form img.loader').fadeOut('slow', function () {
+							$(this).remove();
+						});
+						submitBtn.removeAttr('disabled');
+						form[0].reset(); // Clear the form
+					},
+					error: function (response) {
+						var errorMsg = "Oops! There was a problem submitting your form.";
+						if (response.responseJSON && response.responseJSON.errors) {
+							errorMsg = response.responseJSON.errors.map(function (error) { return error.message; }).join(", ");
 						}
-					);
+						var errorHtml = "<div class='alert alert-error'>" + errorMsg + "</div>";
+						messageBox.html(errorHtml);
+						messageBox.slideDown('slow');
+						$('.contact-form img.loader').fadeOut('slow', function () {
+							$(this).remove();
+						});
+						submitBtn.removeAttr('disabled');
+					}
 				});
-				return false;
 			});
 		});
-		*/
 
 
 	}); // end document ready function
@@ -314,12 +328,12 @@
 	/* ==================================================
 		# Scroll to Top - Recreated
 	 ===============================================*/
-	
+
 	function initScrollToTop() {
 		let scrollBtn = document.querySelector('.scroll-to-top');
-		
+
 		// Show/hide button on scroll
-		window.addEventListener('scroll', function() {
+		window.addEventListener('scroll', function () {
 			if (window.scrollY > 300) {
 				if (scrollBtn) {
 					scrollBtn.classList.add('active');
@@ -330,10 +344,10 @@
 				}
 			}
 		});
-		
+
 		// Scroll to top on click
 		if (scrollBtn) {
-			scrollBtn.addEventListener('click', function(e) {
+			scrollBtn.addEventListener('click', function (e) {
 				e.preventDefault();
 				e.stopPropagation();
 				window.scrollTo({
@@ -343,7 +357,7 @@
 			});
 		}
 	}
-	
+
 	// Initialize immediately and also on page load
 	initScrollToTop();
 	window.addEventListener('load', initScrollToTop);
@@ -369,23 +383,23 @@
 	/* ==================================================
 		Preloader Js
 	================================================== */
-	
+
 	// Set timeout to force hide preloader after 3 seconds
-	setTimeout(function() {
+	setTimeout(function () {
 		const preloader = document.querySelector(".preloader");
 		if (preloader) {
 			preloader.style.display = "none";
 			preloader.style.zIndex = "-1";
 		}
 	}, 3000);
-	
+
 	// Auto-hide preloader on page load
-	window.addEventListener('load', function() {
+	window.addEventListener('load', function () {
 		const preloader = document.querySelector(".preloader");
 		if (preloader) {
 			// Check if this is homepage with hero section
 			const hasHeroSection = document.querySelector(".hero-section") !== null;
-			
+
 			if (!hasHeroSection) {
 				// For non-homepage pages, just hide it immediately
 				preloader.style.display = "none";
@@ -405,7 +419,7 @@
 					y: -100,
 					opacity: 0,
 				});
-				
+
 				if (svg) {
 					tl.to(svg, {
 						duration: 0.5,
@@ -417,7 +431,7 @@
 						ease: "power2.easeOut",
 					});
 				}
-				
+
 				tl.to(".preloader", {
 					y: -1500,
 				});
