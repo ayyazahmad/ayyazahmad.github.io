@@ -269,6 +269,10 @@
 		/* ==================================================
 			Contact Form Validations
 		================================================== */
+		/* ==================================================
+			Contact Form Validations
+		================================================== */
+		/*
 		$('.contact-form').each(function () {
 			var formInstance = $(this);
 			formInstance.submit(function () {
@@ -301,6 +305,7 @@
 				return false;
 			});
 		});
+		*/
 
 
 	}); // end document ready function
