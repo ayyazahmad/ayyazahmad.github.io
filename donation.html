@@ -43,7 +43,20 @@
         right: 10px !important;
       }
     }
+    
+    /* Tighten spacing for QR and detail capsules */
+    .qr-box {
+      margin: 0.5rem 0 !important;
+    }
 
+    .details-box {
+      margin: 0.5rem 0 !important;
+      padding: 0.7rem !important;
+    }
+
+    .details-box > div { /* reduce vertical gaps inside details */
+      margin-top: 0.25rem !important;
+    }
     .service-style-one-item {
       transition: all 0.3s ease;
     }
@@ -199,14 +212,14 @@
               <p style="font-size: 0.9rem; margin-bottom: 1rem; text-align: left;">Cryptocurrency USDT/USDC</p>
 
               <!-- QR Code -->
-              <div style="background: white; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+              <div class="qr-box" style="background: white; padding: 1rem; border-radius: 8px; margin: 0.5rem 0;">
                 <img src="assets/img/qrcode/binance-qr.png" alt="Bitcoin QR Code"
                   style="width: 150px; height: 150px; border: 2px solid #f7931a; border-radius: 6px;">
               </div>
 
               <!-- Payment Details -->
-              <div
-                style="background: rgba(247, 147, 26, 0.1); padding: 0.8rem; border-radius: 6px; margin: 1rem 0; font-size: 0.8rem;">
+              <div class="details-box"
+                style="background: rgba(247, 147, 26, 0.1); padding: 0.8rem; border-radius: 6px; margin: 0.5rem 0; font-size: 0.8rem;">
                 <div style="margin-bottom: 0.2rem;"><strong>Binance Pay ID:</strong></div>
                 <div style="font-weight: 600; color: #f7931a; display: inline-flex; align-items: center;">
                   <span>1047913156</span>
@@ -233,14 +246,14 @@
               <p style="font-size: 0.9rem; margin-bottom: 1rem; text-align: left;">International Transfer</p>
 
               <!-- QR Code -->
-              <div style="background: white; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+              <div class="qr-box" style="background: white; padding: 1rem; border-radius: 8px; margin: 0.5rem 0;">
                 <img src="https://via.placeholder.com/150x150?text=Wise" alt="Wise QR Code"
                   style="width: 150px; height: 150px; border: 2px solid #0052cc; border-radius: 6px;">
               </div>
 
               <!-- Payment Details -->
-              <div
-                style="background: rgba(0, 82, 204, 0.1); padding: 0.8rem; border-radius: 6px; margin: 1rem 0; font-size: 0.8rem;">
+              <div class="details-box"
+                style="background: rgba(0, 82, 204, 0.1); padding: 0.8rem; border-radius: 6px; margin: 0.5rem 0; font-size: 0.8rem;">
                 <div><strong>Fast Global Transfers</strong></div>
                 <div style="font-size: 0.75rem; color: #666; margin-top: 0.5rem;">💱 Low fees • 🌍 180+ countries</div>
                 <div style="font-size: 0.75rem; color: #666; margin-top: 0.3rem;">Real mid-market exchange rates</div>
@@ -262,15 +275,15 @@
               <p style="font-size: 0.9rem; margin-bottom: 1rem; text-align: left;">Monthly & One-time Donations</p>
 
               <!-- QR Code -->
-              <div style="background: white; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+              <div class="qr-box" style="background: white; padding: 1rem; border-radius: 8px; margin: 0.5rem 0;">
                 <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://patreon.com/AyyazAhmad"
                   alt="Patreon QR Code"
                   style="width: 150px; height: 150px; border: 2px solid #e85b46; border-radius: 6px;">
               </div>
 
               <!-- Payment Details -->
-              <div
-                style="background: rgba(232, 91, 70, 0.1); padding: 0.8rem; border-radius: 6px; margin: 1rem 0; font-size: 0.8rem;">
+              <div class="details-box"
+                style="background: rgba(232, 91, 70, 0.1); padding: 0.8rem; border-radius: 6px; margin: 0.5rem 0; font-size: 0.8rem;">
                 <div><strong>Support on:</strong></div>
                 <div style="font-weight: 600; color: #e85b46; margin: 0.5rem 0;">patreon.com/AyyazAhmad</div>
                 <div style="font-size: 0.75rem; color: #666; margin-top: 0.5rem;">💝 Exclusive content • Direct support
@@ -299,14 +312,14 @@
               <p style="font-size: 0.9rem; margin-bottom: 1rem; text-align: left;">Pakistan Mobile Account</p>
 
               <!-- QR Code -->
-              <div style="background: white; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+              <div class="qr-box" style="background: white; padding: 1rem; border-radius: 8px; margin: 0.5rem 0;">
                 <img src="assets/img/qrcode/easypaisa-qr.png" alt="Easypaisa QR Code"
                   style="width: 150px; height: 150px; border: 2px solid #f39c12; border-radius: 6px;">
               </div>
 
               <!-- Payment Details -->
-              <div
-                style="background: rgba(243, 156, 18, 0.1); padding: 0.8rem; border-radius: 6px; margin: 1rem 0; font-size: 0.8rem;">
+              <div class="details-box"
+                style="background: rgba(243, 156, 18, 0.1); padding: 0.8rem; border-radius: 6px; margin: 0.5rem 0; font-size: 0.8rem;">
                 <div><strong>Name:</strong> Ayaz Ahmed</div>
 
                 <div style="margin-top: 0.2rem; margin-bottom: 0.1rem;"><strong>Account #:</strong></div>
@@ -340,14 +353,14 @@
               <p style="font-size: 0.9rem; margin-bottom: 1rem; text-align: left;">Pakistan Mobile Account</p>
 
               <!-- QR Code -->
-              <div style="background: white; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+              <div class="qr-box" style="background: white; padding: 1rem; border-radius: 8px; margin: 0.5rem 0;">
                 <img src="assets/img/qrcode/jazzcash-qr.png" alt="JazzCash QR Code"
                   style="width: 150px; height: 150px; border: 2px solid #e60c34; border-radius: 6px;">
               </div>
 
               <!-- Payment Details -->
-              <div
-                style="background: rgba(230, 12, 52, 0.1); padding: 0.8rem; border-radius: 6px; margin: 1rem 0; font-size: 0.8rem;">
+              <div class="details-box"
+                style="background: rgba(230, 12, 52, 0.1); padding: 0.8rem; border-radius: 6px; margin: 0.5rem 0; font-size: 0.8rem;">
                 <div><strong>Name:</strong> Ayyaz Ahmad</div>
 
                 <div style="margin-top: 0.2rem; margin-bottom: 0.1rem;"><strong>Account #:</strong></div>
@@ -387,14 +400,14 @@
               <p style="font-size: 0.9rem; margin-bottom: 1rem; text-align: left;">Bank Transfer</p>
 
               <!-- QR Code -->
-              <div style="background: white; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+              <div class="qr-box" style="background: white; padding: 1rem; border-radius: 8px; margin: 0.5rem 0;">
                 <img src="https://via.placeholder.com/150x150?text=UBL" alt="UBL QR Code"
                   style="width: 150px; height: 150px; border: 2px solid #1a5a96; border-radius: 6px;">
               </div>
 
               <!-- Payment Details -->
-              <div
-                style="background: rgba(26, 90, 150, 0.1); padding: 0.8rem; border-radius: 6px; margin: 1rem 0; font-size: 0.8rem;">
+              <div class="details-box"
+                style="background: rgba(26, 90, 150, 0.1); padding: 0.8rem; border-radius: 6px; margin: 0.5rem 0; font-size: 0.8rem;">
                 <div><strong>Account Title:</strong> Ayyaz Ahmad</div>
 
                 <div style="margin-top: 0.2rem; margin-bottom: 0.1rem;"><strong>Account #:</strong></div>
@@ -428,14 +441,14 @@
               <p style="font-size: 0.9rem; margin-bottom: 1rem; text-align: left;">Bank Transfer</p>
 
               <!-- QR Code -->
-              <div style="background: white; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+              <div class="qr-box" style="background: white; padding: 1rem; border-radius: 8px; margin: 0.5rem 0;">
                 <img src="https://via.placeholder.com/150x150?text=SCB" alt="SCB QR Code"
                   style="width: 150px; height: 150px; border: 2px solid #c41e3a; border-radius: 6px;">
               </div>
 
               <!-- Payment Details -->
-              <div
-                style="background: rgba(196, 30, 58, 0.1); padding: 0.8rem; border-radius: 6px; margin: 1rem 0; font-size: 0.8rem;">
+              <div class="details-box"
+                style="background: rgba(196, 30, 58, 0.1); padding: 0.8rem; border-radius: 6px; margin: 0.5rem 0; font-size: 0.8rem;">
                 <div><strong>Account Title:</strong> Ayyaz Ahmad</div>
 
                 <div style="margin-top: 0.2rem; margin-bottom: 0.1rem;"><strong>Account #:</strong></div>
@@ -469,14 +482,14 @@
               <p style="font-size: 0.9rem; margin-bottom: 1rem; text-align: left;">Real-Time Transfer</p>
 
               <!-- QR Code -->
-              <div style="background: white; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+              <div class="qr-box" style="background: white; padding: 1rem; border-radius: 8px; margin: 0.5rem 0;">
                 <img src="https://via.placeholder.com/150x150?text=Raast" alt="Raast QR Code"
                   style="width: 150px; height: 150px; border: 2px solid #6c757d; border-radius: 6px;">
               </div>
 
               <!-- Payment Details -->
-              <div
-                style="background: rgba(108, 117, 125, 0.1); padding: 0.8rem; border-radius: 6px; margin: 1rem 0; font-size: 0.8rem;">
+              <div class="details-box"
+                style="background: rgba(108, 117, 125, 0.1); padding: 0.8rem; border-radius: 6px; margin: 0.5rem 0; font-size: 0.8rem;">
                 <div style="margin-bottom: 0.2rem;"><strong>Raast ID:</strong></div>
                 <div style="font-weight: 600; color: #6c757d; display: inline-flex; align-items: center;">
                   <span>03217563344</span>
