@@ -331,6 +331,26 @@
 		});
 
 
+
+		/* ==================================================
+			Copy to Clipboard
+		================================================== */
+		$(document).on('click', '.copy-icon', function () {
+			var text = $(this).attr('data-copy');
+			var $icon = $(this);
+
+			navigator.clipboard.writeText(text).then(function () {
+				// Success feedback
+				$icon.removeClass('fa-copy').addClass('fa-check').css('color', '#28a745'); // Green check
+
+				setTimeout(function () {
+					$icon.removeClass('fa-check').addClass('fa-copy').css('color', '#999'); // Revert
+				}, 2000);
+			}, function (err) {
+				console.error('Could not copy text: ', err);
+			});
+		});
+
 	}); // end document ready function
 
 
