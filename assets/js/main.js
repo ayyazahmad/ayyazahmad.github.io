@@ -307,6 +307,7 @@
 						});
 						submitBtn.removeAttr('disabled');
 						console.log('FAILED...', error);
+						alert("EmailJS Error: " + JSON.stringify(error));
 					});
 			});
 		});
