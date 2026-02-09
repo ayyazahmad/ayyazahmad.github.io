@@ -283,7 +283,7 @@
 				messageBox.hide();
 
 				submitBtn
-					.after('<img src="assets/img/ajax-loader.gif" class="loader" />')
+					.after('<i class="fa fa-spinner fa-spin loader" style="color: grey; font-size: 20px; margin-left: 10px;"></i>')
 					.attr('disabled', 'disabled');
 
 				$.ajax({
@@ -293,29 +293,29 @@
 					dataType: "json",
 					success: function (response) {
 						if (response.result === "success") {
-							var successHtml = "<div class='alert alert-success'><h3>Email Sent Successfully.</h3><p>Thank you, your message has been submitted.</p></div>";
+							var successHtml = "<p style='color: #28a745; margin-top: 15px; font-weight: 600;'>Email Sent Successfully. Thank you, your message has been submitted.</p>";
 							messageBox.html(successHtml);
 							messageBox.slideDown('slow');
-							$('.contact-form img.loader').fadeOut('slow', function () {
+							$('.contact-form .loader').fadeOut('slow', function () {
 								$(this).remove();
 							});
 							submitBtn.removeAttr('disabled');
 							form[0].reset();
 						} else {
-							var errorHtml = "<div class='alert alert-error'>Oops! " + (response.error || "Failed to send message.") + "</div>";
+							var errorHtml = "<div class='alert alert-danger'>Oops! " + (response.error || "Failed to send message.") + "</div>";
 							messageBox.html(errorHtml);
 							messageBox.slideDown('slow');
-							$('.contact-form img.loader').fadeOut('slow', function () {
+							$('.contact-form .loader').fadeOut('slow', function () {
 								$(this).remove();
 							});
 							submitBtn.removeAttr('disabled');
 						}
 					},
 					error: function (response) {
-						var errorHtml = "<div class='alert alert-error'>Oops! Failed to send message. Please try again later.</div>";
+						var errorHtml = "<div class='alert alert-danger'>Oops! Failed to send message. Please try again later.</div>";
 						messageBox.html(errorHtml);
 						messageBox.slideDown('slow');
-						$('.contact-form img.loader').fadeOut('slow', function () {
+						$('.contact-form .loader').fadeOut('slow', function () {
 							$(this).remove();
 						});
 						submitBtn.removeAttr('disabled');
