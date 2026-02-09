@@ -54,9 +54,29 @@
       padding: 0.7rem !important;
     }
 
-    .details-box > div { /* reduce vertical gaps inside details */
-      margin: 0.12rem 0 !important;
+    .details-box > div { /* remove vertical gaps inside details */
+      margin: 0 !important;
+      padding: 0 !important;
     }
+
+    /* Label and value helpers inside details-box */
+    .details-box .label {
+      margin: 0 !important;
+      padding: 0 !important;
+      font-weight: 600;
+      display: block;
+    }
+
+    .details-box .value {
+      margin: 0 !important;
+      padding: 0 !important;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Ensure any <strong> used as label has no extra bottom spacing */
+    .details-box strong { display: inline-block; margin: 0 !important; }
     .service-style-one-item {
       transition: all 0.3s ease;
     }
