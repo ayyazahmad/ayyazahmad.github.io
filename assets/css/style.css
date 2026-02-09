@@ -6475,3 +6475,20 @@ body.loaded {
 		opacity: 0;
 	}
 }
+
+/* ============================================= 
+   Donation Page - Override span styles inside details-box
+   Fixes: margin-top: 40px from .service-style-one-item span
+   ============================================= */
+.service-style-one-item .details-box span {
+	margin-top: 0 !important;
+	padding: 0 !important;
+	border-radius: 0 !important;
+	background: none !important;
+	border: none !important;
+	display: inline !important;
+}
+
+.service-style-one-item .details-box .copy-icon {
+	margin-top: 0 !important;
+}
