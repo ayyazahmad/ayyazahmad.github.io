@@ -302,7 +302,7 @@
 							submitBtn.removeAttr('disabled');
 							form[0].reset();
 						} else {
-							var errorHtml = "<div class='alert alert-danger'>Oops! " + (response.error || "Failed to send message.") + "</div>";
+							var errorHtml = "<p style='color: #dc3545; margin-top: 15px; font-weight: 600;'>Oops! " + (response.error || "Failed to send message.") + "</p>";
 							messageBox.html(errorHtml);
 							messageBox.slideDown('slow');
 							$('.contact-form .loader').fadeOut('slow', function () {
@@ -312,7 +312,7 @@
 						}
 					},
 					error: function (response) {
-						var errorHtml = "<div class='alert alert-danger'>Oops! Failed to send message. Please try again later.</div>";
+						var errorHtml = "<p style='color: #dc3545; margin-top: 15px; font-weight: 600;'>Oops! Failed to send message. Please try again later.</p>";
 						messageBox.html(errorHtml);
 						messageBox.slideDown('slow');
 						$('.contact-form .loader').fadeOut('slow', function () {
