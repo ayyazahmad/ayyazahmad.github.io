@@ -911,15 +911,18 @@ body.light-mode .privacy-section h3 {
   }
 
   .footer-bottom {
+    width: 100%;
     text-align: center;
-    padding-top: 2rem;
+    padding: 2rem;
     border-top: 1px solid var(--card-border);
     color: rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
   }
 
   .footer-bottom p {
-    margin: 0.5rem 0;
+    margin: 0.5rem auto;
     text-align: center;
+    max-width: 100%;
   }
 
   body.light-mode .footer-bottom {
