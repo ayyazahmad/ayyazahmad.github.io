@@ -271,6 +271,7 @@ const PROJECTS_DATA = [
     features: ["Batch Download", "Auto Backup", "File Manager", "Progress Tracking", "Resume Support"],
     links: {
       github: "https://github.com/ayyazahmad/AzAd-Smart-Downloader",
+      store: "https://chromewebstore.google.com/detail/azad-smart-downloader/kmhffijpjfhleppnokojhcecipegeajl",
       wordpress: "https://wordpress.org/plugins/"
     }
   },

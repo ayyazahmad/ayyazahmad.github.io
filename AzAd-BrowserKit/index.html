@@ -20,7 +20,10 @@
   <!-- ========== HEADER & NAVIGATION ========== -->
   <header>
     <nav>
-      <a href="index.html" class="logo">AzAd BrowserKit</a>
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <img src="assets/img/icons/icon128.png" alt="AzAd BrowserKit Logo" style="width: 40px; height: 40px;">
+        <a href="index.html" class="logo">AzAd BrowserKit</a>
+      </div>
       
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -51,16 +54,16 @@
 
       <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 2rem;">
         <div>
-          <div style="font-size: 2rem; font-weight: bold; color: var(--accent);">v1.0.2</div>
-          <div style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">Latest Version</div>
+          <div class="hero-stat-number">v1.0.2</div>
+          <div class="hero-stat-label">Latest Version</div>
         </div>
         <div>
-          <div style="font-size: 2rem; font-weight: bold; color: var(--accent);">9</div>
-          <div style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">Tools Included</div>
+          <div class="hero-stat-number">9</div>
+          <div class="hero-stat-label">Tools Included</div>
         </div>
         <div>
-          <div style="font-size: 2rem; font-weight: bold; color: var(--accent);">Free</div>
-          <div style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">Open Source</div>
+          <div class="hero-stat-number">Free</div>
+          <div class="hero-stat-label">Open Source</div>
         </div>
       </div>
     </div>
@@ -183,7 +186,7 @@
   </section>
 
   <!-- ========== FEATURED DETAILS SECTION ========== -->
-  <section class="featured-section" style="background: rgba(0,217,255,0.02); border-top: 1px solid var(--card-border); border-bottom: 1px solid var(--card-border);">
+  <section class="featured-section" style="background: rgba(59,29,109,0.02); border-top: 1px solid var(--card-border); border-bottom: 1px solid var(--card-border);">
     <h2 class="section-title">Spotlight Features</h2>
 
     <div class="featured-grid">
@@ -253,7 +256,7 @@
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
         <div class="footer-section">
           <h4>About</h4>
-          <p style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">AzAd BrowserKit is a free, open-source Chrome extension packed with developer tools to enhance your workflow.</p>
+          <p class="footer-about-text">AzAd BrowserKit is a free, open-source Chrome extension packed with developer tools to enhance your workflow.</p>
           <div class="social-links">
             <a href="https://github.com/ayyazahmad/AzAd-BrowserKit" target="_blank" rel="noopener" title="GitHub">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
