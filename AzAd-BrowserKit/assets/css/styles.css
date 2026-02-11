@@ -175,20 +175,13 @@ body.light-mode .marquee-section {
   width: 100%;
   height: auto;
   display: block;
-  max-height: 400px;
   object-fit: cover;
   object-position: center;
 }
 
-@media (max-width: 768px) {
-  .marquee-image {
-    max-height: 250px;
-  }
-}
-
 /* ========== HERO SECTION ========== */
 .hero {
-  margin-top: 60px;
+  margin-top: 0;
   padding: 5rem 2rem;
   background: linear-gradient(135deg, rgba(0, 168, 168, 0.1) 0%, rgba(0, 217, 255, 0.1) 100%);
   border-bottom: 1px solid var(--card-border);
