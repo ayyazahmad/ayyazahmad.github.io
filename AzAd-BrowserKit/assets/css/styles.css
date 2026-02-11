@@ -36,6 +36,9 @@ body {
 body.light-mode {
   background: var(--bg-light);
   color: var(--text-dark);
+  /* Override theme variables for light mode to match extension settings */
+  --primary: #3B1D6D; /* dark purple */
+  --accent: #6A4FB3;  /* purple-soft */
 }
 
 /* ========== HEADER & NAVIGATION ========== */
@@ -399,6 +402,14 @@ body.light-mode .feature-card:hover {
   justify-content: center;
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
+}
+
+.feature-icon img {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  object-fit: contain;
+  display: block;
 }
 
 .feature-card h3 {
