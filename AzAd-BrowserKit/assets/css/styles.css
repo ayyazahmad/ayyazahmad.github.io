@@ -917,8 +917,17 @@ body.light-mode .privacy-section h3 {
     color: rgba(255, 255, 255, 0.5);
   }
 
+  .footer-bottom p {
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+
   body.light-mode .footer-bottom {
     border-top-color: rgba(59, 29, 109, 0.2);
+    color: rgba(30, 41, 59, 0.85);
+  }
+
+  body.light-mode .footer-bottom p {
     color: rgba(30, 41, 59, 0.85);
   }
 
