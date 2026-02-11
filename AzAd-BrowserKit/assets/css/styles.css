@@ -848,10 +848,9 @@ body.light-mode .privacy-section h3 {
 
   .footer-brand {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 1rem;
     margin-bottom: 1.5rem;
-    align-items: flex-start;
   }
 
   .footer-logo {
