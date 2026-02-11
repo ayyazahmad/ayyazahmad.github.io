@@ -861,15 +861,19 @@ body.light-mode .privacy-section h3 {
   }
 
   .footer-section h4 {
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
+    margin: 0 0 1.5rem 0;
+    padding-bottom: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 800;
     color: var(--text-light);
-    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
   }
 
   body.light-mode .footer-section h4 {
     color: #3B1D6D;
-    font-weight: 800;
+    font-weight: 900;
+    border-bottom-color: rgba(59, 29, 109, 0.3);
   }
 
   .footer-section ul {
