@@ -42,7 +42,7 @@
 
   <!-- ========== HERO SECTION ========== -->
   <section class="hero">
-     <div class="hero-content">
+    <div class="hero-content">
       <div class="hero-icon">🛠️</div>
       <h1>Powerful Developer Tools<br><span class="hero-gradient">for Chrome</span></h1>
       <p>Streamline your web development workflow with our suite of 9 professional tools. Color picker, font inspector, link collector, and more. Boost your productivity.</p>
@@ -77,7 +77,7 @@
     <div class="features-grid">
       <!-- Color Picker -->
       <div class="feature-card">
-        <div class="feature-icon"><img src="assets/img/icons/color-picker-128.png" alt="Color Picker"></div>
+        <img class="feature-icon" src="assets/img/icons/color-picker-128.png" alt="Color Picker">
         <h3>Color Picker</h3>
         <p>Extract any color from websites with one click</p>
         <ul>
@@ -89,7 +89,7 @@
 
       <!-- Font Inspector -->
       <div class="feature-card">
-        <div class="feature-icon"><img src="assets/img/icons/font-inspector-128.png" alt="Font Inspector"></div>
+        <img class="feature-icon" src="assets/img/icons/font-inspector-128.png" alt="Font Inspector">
         <h3>Font Inspector</h3>
         <p>Inspect typography on any webpage instantly</p>
         <ul>
@@ -101,7 +101,7 @@
 
       <!-- Link Collector -->
       <div class="feature-card">
-        <div class="feature-icon"><img src="assets/img/icons/link-collector-128.png" alt="Link Collector"></div>
+        <img class="feature-icon" src="assets/img/icons/link-collector-128.png" alt="Link Collector">
         <h3>Link Collector</h3>
         <p>Harvest all links from any page with smart filtering</p>
         <ul>
@@ -113,7 +113,7 @@
 
       <!-- Email Extractor -->
       <div class="feature-card">
-        <div class="feature-icon"><img src="assets/img/icons/email-extractor-128.png" alt="Email Extractor"></div>
+        <img class="feature-icon" src="assets/img/icons/email-extractor-128.png" alt="Email Extractor">
         <h3>Email Extractor</h3>
         <p>Extract all email addresses from webpages</p>
         <ul>
@@ -125,7 +125,7 @@
 
       <!-- Table Extractor -->
       <div class="feature-card">
-        <div class="feature-icon"><img src="assets/img/icons/table-extractor-128.png" alt="Table Extractor"></div>
+        <img class="feature-icon" src="assets/img/icons/table-extractor-128.png" alt="Table Extractor">
         <h3>Table Extractor</h3>
         <p>Convert HTML tables to CSV format instantly</p>
         <ul>
@@ -137,7 +137,7 @@
 
       <!-- Smart Links -->
       <div class="feature-card">
-        <div class="feature-icon"><img src="assets/img/icons/smart-links-128.png" alt="Smart Links"></div>
+        <img class="feature-icon" src="assets/img/icons/smart-links-128.png" alt="Smart Links">
         <h3>Smart Links</h3>
         <p>Auto-convert plain URLs to clickable links</p>
         <ul>
@@ -149,7 +149,7 @@
 
       <!-- Hover Zoom -->
       <div class="feature-card">
-        <div class="feature-icon"><img src="assets/img/icons/hover-zoom-128.png" alt="Hover Zoom"></div>
+        <img class="feature-icon" src="assets/img/icons/hover-zoom-128.png" alt="Hover Zoom">
         <h3>Hover Zoom</h3>
         <p>Scale images and videos on hover</p>
         <ul>
@@ -161,7 +161,7 @@
 
       <!-- Password Reveal -->
       <div class="feature-card">
-        <div class="feature-icon"><img src="assets/img/icons/password-reveal-128.png" alt="Password Reveal"></div>
+        <img class="feature-icon" src="assets/img/icons/password-reveal-128.png" alt="Password Reveal">
         <h3>Password Reveal</h3>
         <p>Securely reveal password fields when needed</p>
         <ul>
@@ -173,7 +173,7 @@
 
       <!-- Text Case Tools -->
       <div class="feature-card">
-        <div class="feature-icon"><img src="assets/img/icons/text-case-tools-128.png" alt="Text Case Tools"></div>
+        <img class="feature-icon" src="assets/img/icons/text-case-tools-128.png" alt="Text Case Tools">
         <h3>Text Case Tools</h3>
         <p>Transform text case with a single click</p>
         <ul>
@@ -252,8 +252,9 @@
 
   <!-- ========== FOOTER ========== -->
   <footer>
-      <div class="footer-content">
-          <div class="footer-section">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+        <div class="footer-section">
           <h4>About</h4>
           <p class="footer-about-text">AzAd BrowserKit is a free, open-source Chrome extension packed with developer tools to enhance your workflow.</p>
           <div class="social-links">
@@ -305,7 +306,8 @@
         <p>&copy; 2026 AzAd. All rights reserved. | Made with ❤️ for developers</p>
         <p style="font-size: 0.85rem; margin-top: 0.5rem;">AzAd BrowserKit is open source and available on <a href="https://github.com/ayyazahmad/AzAd-BrowserKit" target="_blank" style="color: var(--accent);">GitHub</a></p>
       </div>
-    </footer>
+    </div>
+  </footer>
 
   <!-- ========== SCROLL TO TOP BUTTON ========== -->
   <button id="scrollToTopBtn" style="display: none; position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--accent)); color: white; border: none; cursor: pointer; font-size: 1.5rem; z-index: 999; transition: all 0.3s ease;">↑</button>
