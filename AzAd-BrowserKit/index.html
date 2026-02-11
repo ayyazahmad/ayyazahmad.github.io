@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AzAd BrowserKit - Powerful Developer Tools for Chrome. Color Picker, Font Inspector, Link Collector, and more.">
+  <meta name="theme-color" content="#00a8a8">
+  <title>AzAd BrowserKit - Developer Tools for Chrome</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/img/icons/icon128.png">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <!-- ========== HEADER & NAVIGATION ========== -->
+  <header>
+    <nav>
+      <a href="index.html" class="logo">AzAd BrowserKit</a>
+      
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+      
+      <div>
+        <button id="themeToggle" class="theme-toggle" title="Toggle dark/light mode">🌙</button>
+        <a href="https://chrome.google.com/webstore" target="_blank" rel="noopener" class="btn-install">Install</a>
+        <button class="mobile-menu-btn">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-icon">🛠️</div>
+      <h1>Powerful Developer Tools<br><span class="hero-gradient">for Chrome</span></h1>
+      <p>Streamline your web development workflow with our suite of 9 professional tools. Color picker, font inspector, link collector, and more. Boost your productivity.</p>
+      
+      <div class="hero-buttons">
+        <a href="https://chrome.google.com/webstore" target="_blank" rel="noopener" class="btn-primary">Install Now</a>
+        <a href="#features" class="btn-secondary">Explore Features</a>
+      </div>
+
+      <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 2rem;">
+        <div>
+          <div style="font-size: 2rem; font-weight: bold; color: var(--accent);">v1.0.2</div>
+          <div style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">Latest Version</div>
+        </div>
+        <div>
+          <div style="font-size: 2rem; font-weight: bold; color: var(--accent);">9</div>
+          <div style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">Tools Included</div>
+        </div>
+        <div>
+          <div style="font-size: 2rem; font-weight: bold; color: var(--accent);">Free</div>
+          <div style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">Open Source</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURES GRID SECTION ========== -->
+  <section class="features" id="features">
+    <h2 class="section-title">All Tools at Your Fingertips</h2>
+    <p class="section-subtitle">Nine powerful features designed to enhance your web development workflow</p>
+
+    <div class="features-grid">
+      <!-- Color Picker -->
+      <div class="feature-card">
+        <div class="feature-icon">🎨</div>
+        <h3>Color Picker</h3>
+        <p>Extract any color from websites with one click</p>
+        <ul>
+          <li>HEX, RGB, HSL formats</li>
+          <li>Alpha channel support</li>
+          <li>Auto-copy to clipboard</li>
+        </ul>
+      </div>
+
+      <!-- Font Inspector -->
+      <div class="feature-card">
+        <div class="feature-icon">🔤</div>
+        <h3>Font Inspector</h3>
+        <p>Inspect typography on any webpage instantly</p>
+        <ul>
+          <li>Font family detection</li>
+          <li>Size, weight, line-height</li>
+          <li>Hover-based inspection</li>
+        </ul>
+      </div>
+
+      <!-- Link Collector -->
+      <div class="feature-card">
+        <div class="feature-icon">🔗</div>
+        <h3>Link Collector</h3>
+        <p>Harvest all links from any page with smart filtering</p>
+        <ul>
+          <li>Remove tracking parameters</li>
+          <li>Auto-deduplication</li>
+          <li>CSV export</li>
+        </ul>
+      </div>
+
+      <!-- Email Extractor -->
+      <div class="feature-card">
+        <div class="feature-icon">📧</div>
+        <h3>Email Extractor</h3>
+        <p>Extract all email addresses from webpages</p>
+        <ul>
+          <li>Domain filtering</li>
+          <li>Deduplication</li>
+          <li>One-click copy</li>
+        </ul>
+      </div>
+
+      <!-- Table Extractor -->
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3>Table Extractor</h3>
+        <p>Convert HTML tables to CSV format instantly</p>
+        <ul>
+          <li>HTML table detection</li>
+          <li>CSV export</li>
+          <li>Download or copy</li>
+        </ul>
+      </div>
+
+      <!-- Smart Links -->
+      <div class="feature-card">
+        <div class="feature-icon">🖇️</div>
+        <h3>Smart Links</h3>
+        <p>Auto-convert plain URLs to clickable links</p>
+        <ul>
+          <li>Auto-link detection</li>
+          <li>Per-site controls</li>
+          <li>Works offline</li>
+        </ul>
+      </div>
+
+      <!-- Hover Zoom -->
+      <div class="feature-card">
+        <div class="feature-icon">🔍</div>
+        <h3>Hover Zoom</h3>
+        <p>Scale images and videos on hover</p>
+        <ul>
+          <li>Configurable scale</li>
+          <li>Adjustable delay</li>
+          <li>Smooth animations</li>
+        </ul>
+      </div>
+
+      <!-- Password Reveal -->
+      <div class="feature-card">
+        <div class="feature-icon">🔐</div>
+        <h3>Password Reveal</h3>
+        <p>Securely reveal password fields when needed</p>
+        <ul>
+          <li>Modifier key activation</li>
+          <li>Banking site safeguards</li>
+          <li>Disabled by default</li>
+        </ul>
+      </div>
+
+      <!-- Text Case Tools -->
+      <div class="feature-card">
+        <div class="feature-icon">📝</div>
+        <h3>Text Case Tools</h3>
+        <p>Transform text case with a single click</p>
+        <ul>
+          <li>UPPERCASE / lowercase</li>
+          <li>Title Case conversion</li>
+          <li>Context menu access</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURED DETAILS SECTION ========== -->
+  <section class="featured-section" style="background: rgba(0,217,255,0.02); border-top: 1px solid var(--card-border); border-bottom: 1px solid var(--card-border);">
+    <h2 class="section-title">Spotlight Features</h2>
+
+    <div class="featured-grid">
+      <!-- Color Picker Detail -->
+      <div class="featured-item">
+        <img src="assets/img/screenshots/Screenshot 2026-02-11 195050.png" alt="Color Picker Feature">
+      </div>
+      <div class="featured-item">
+        <div class="featured-content">
+          <h3>🎨 Color Picker</h3>
+          <p>Perfect for designers and developers. Pick any color from any website and instantly get the exact color value in your preferred format.</p>
+          <ul style="margin-left: 1rem; list-style: disc;">
+            <li style="margin-bottom: 0.5rem;">Real-time color detection</li>
+            <li style="margin-bottom: 0.5rem;">Support for HEX, RGB, and HSL formats</li>
+            <li style="margin-bottom: 0.5rem;">Alpha channel transparency support</li>
+            <li style="margin-bottom: 0.5rem;">Automatic copy to clipboard</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Font Inspector Detail -->
+      <div class="featured-item">
+        <div class="featured-content">
+          <h3>🔤 Font Inspector</h3>
+          <p>Discover every font detail on any webpage. Inspect typography information instantly without digging through DevTools.</p>
+          <ul style="margin-left: 1rem; list-style: disc;">
+            <li style="margin-bottom: 0.5rem;">Identify font families instantly</li>
+            <li style="margin-bottom: 0.5rem;">View font size, weight, and line-height</li>
+            <li style="margin-bottom: 0.5rem;">Hover-based inspection mode</li>
+            <li style="margin-bottom: 0.5rem;">Copy font details in one click</li>
+          </ul>
+        </div>
+      </div>
+      <div class="featured-item">
+        <img src="assets/img/screenshots/Screenshot 2026-02-11 200209.png" alt="Font Inspector Feature">
+      </div>
+
+      <!-- Link Collector Detail -->
+      <div class="featured-item">
+        <img src="assets/img/screenshots/Screenshot 2026-02-11 200227.png" alt="Link Collector Feature">
+      </div>
+      <div class="featured-item">
+        <div class="featured-content">
+          <h3>🔗 Link Collector</h3>
+          <p>Harvest all links from any page instantly. Perfect for research, scraping, or keeping track of resources.</p>
+          <ul style="margin-left: 1rem; list-style: disc;">
+            <li style="margin-bottom: 0.5rem;">Collect all links with one click</li>
+            <li style="margin-bottom: 0.5rem;">Automatic tracking parameter removal</li>
+            <li style="margin-bottom: 0.5rem;">Duplicate link deduplication</li>
+            <li style="margin-bottom: 0.5rem;">Export as CSV or copy to clipboard</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA SECTION ========== -->
+  <section class="cta-section">
+    <h2 class="section-title">Ready to Boost Your Workflow?</h2>
+    <p class="section-subtitle">Install AzAd BrowserKit now and start using these powerful tools immediately</p>
+    <a href="https://chrome.google.com/webstore" target="_blank" rel="noopener" class="btn-primary" style="width: auto; display: inline-block;">Install on Chrome Web Store</a>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+        <div class="footer-section">
+          <h4>About</h4>
+          <p style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">AzAd BrowserKit is a free, open-source Chrome extension packed with developer tools to enhance your workflow.</p>
+          <div class="social-links">
+            <a href="https://github.com/ayyazahmad/AzAd-BrowserKit" target="_blank" rel="noopener" title="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.493.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+            <a href="https://discord.gg" target="_blank" rel="noopener" title="Discord">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.211.375-.444.864-.607 1.25a18.27 18.27 0 00-5.487 0c-.163-.386-.395-.875-.607-1.25a.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.042-.106 13.107 13.107 0 01-1.872-.892.077.077 0 00-.008-.128 10.713 10.713 0 00.372-.294.075.075 0 00.083-.01 14.047 14.047 0 0012.052 0c.027.02.052.021.083.011.12.09.246.19.371.294a.077.077 0 00-.006.127 12.299 12.299 0 01-1.873.892.076.076 0 00-.041.107c.352.699.764 1.365 1.226 1.993a.078.078 0 00.084.03 19.869 19.869 0 006.002-3.03.077.077 0 00.032-.056c.5-4.506-.838-8.962-3.554-12.662a.06.06 0 00-.031-.03zM8.02 15.33c-1.182 0-2.157-1.085-2.157-2.419 0-1.333.948-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.948 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.948-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="https://github.com/ayyazahmad/AzAd-BrowserKit" target="_blank">GitHub</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="https://github.com/ayyazahmad/AzAd-BrowserKit/blob/main/DEVELOPERS.md" target="_blank">Developer Docs</a></li>
+            <li><a href="https://github.com/ayyazahmad/AzAd-BrowserKit/blob/main/CHANGELOG.md" target="_blank">Changelog</a></li>
+            <li><a href="https://github.com/ayyazahmad/AzAd-BrowserKit/blob/main/CONTRIBUTING.md" target="_blank">Contribute</a></li>
+            <li><a href="https://github.com/ayyazahmad/AzAd-BrowserKit/issues" target="_blank">Report Issue</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="https://github.com/ayyazahmad/AzAd-BrowserKit/blob/main/LICENSE" target="_blank">License (MIT)</a></li>
+            <li><a href="https://github.com/ayyazahmad/AzAd-BrowserKit/blob/main/CODE_OF_CONDUCT.md" target="_blank">Code of Conduct</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 AzAd. All rights reserved. | Made with ❤️ for developers</p>
+        <p style="font-size: 0.85rem; margin-top: 0.5rem;">AzAd BrowserKit is open source and available on <a href="https://github.com/ayyazahmad/AzAd-BrowserKit" target="_blank" style="color: var(--accent);">GitHub</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== SCROLL TO TOP BUTTON ========== -->
+  <button id="scrollToTopBtn" style="display: none; position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--accent)); color: white; border: none; cursor: pointer; font-size: 1.5rem; z-index: 999; transition: all 0.3s ease;">↑</button>
+
+  <!-- JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

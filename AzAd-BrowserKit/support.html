@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Support and FAQ for AzAd BrowserKit - Get help with all 9 features">
+  <meta name="theme-color" content="#00a8a8">
+  <title>Support - AzAd BrowserKit</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/img/icons/icon128.png">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <!-- ========== HEADER & NAVIGATION ========== -->
+  <header>
+    <nav>
+      <a href="index.html" class="logo">AzAd BrowserKit</a>
+      
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="support.html" class="active">Support</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+      
+      <div>
+        <button id="themeToggle" class="theme-toggle" title="Toggle dark/light mode">🌙</button>
+        <a href="https://chrome.google.com/webstore" target="_blank" rel="noopener" class="btn-install">Install</a>
+        <button class="mobile-menu-btn">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-icon">❓</div>
+      <h1>Get Help & Learn <span class="hero-gradient">Features</span></h1>
+      <p>Find answers to common questions and learn how to get the most out of each tool.</p>
+    </div>
+  </section>
+
+  <!-- ========== FAQ SECTION ========== -->
+  <section style="max-width: 1200px; margin: 0 auto; padding: 4rem 2rem;">
+    <div class="faq-container">
+      <div class="search-box">
+        <input type="text" id="faqSearch" placeholder="🔍 Search FAQs...">
+      </div>
+
+      <!-- Color Picker FAQs -->
+      <div style="margin-bottom: 2rem;">
+        <h3 style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--accent);">🎨 Color Picker</h3>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>How do I pick a color from a website?</h4>
+            <span class="faq-toggle">⌄</span>
+          </div>
+          <div class="faq-answer">
+            <p>Click the <strong>Color Picker</strong> button in the extension popup, then click on any color on the webpage. The color will be extracted and copied to your clipboard automatically. You can change the color format (HEX, RGB, HSL) in the popup before clicking.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>What color formats are supported?</h4>
+            <span class="faq-toggle">⌄</span>
+          </div>
+          <div class="faq-answer">
+            <p>Color Picker supports <strong>HEX</strong> (e.g., #FF5733), <strong>RGB</strong> (e.g., rgb(255, 87, 51)), and <strong>HSL</strong> (e.g., hsl(9, 100%, 60%)) formats. You can select your preferred format from the Color Picker settings.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>Can I extract colors with transparency?</h4>
+            <span class="faq-toggle">⌄</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes! Color Picker supports alpha channel (transparency). When you pick a semi-transparent color, it will be saved with alpha values (e.g., rgba(255, 87, 51, 0.8) or #FF573399).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Font Inspector FAQs -->
+      <div style="margin-bottom: 2rem;">
+        <h3 style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--accent);">🔤 Font Inspector</h3>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>How do I inspect fonts on a webpage?</h4>
+            <span class="faq-toggle">⌄</span>
+          </div>
+          <div class="faq-answer">
+            <p>Open the Font Inspector from the popup and <strong>hover over any text</strong> on the page. The font details will appear showing family, size, weight, line-height, and more. Click to expand and copy the information.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>Can I identify Google Fonts or custom fonts?</h4>
+            <span class="faq-toggle">⌄</span>
+          </div>
+          <div class="faq-answer">
+            <p>Font Inspector will show the actual font family name as declared in the CSS. For Google Fonts, web fonts, or custom fonts, it displays the primary font name and the fallback fonts in the font stack.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>What information does Font Inspector show?</h4>
+            <span class="faq-toggle">⌄</span>
+          </div>
+          <div class="faq-answer">
+            <p>Font Inspector provides: <strong>Font Family</strong> (name and fallbacks), <strong>Size</strong> (in px), <strong>Weight</strong> (100-900), <strong>Line Height</strong>, <strong>Letter Spacing</strong>, <strong>Text Transform</strong>, and <strong>Font Style</strong> (italic, normal).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Link Collector FAQs -->
+      <div style="margin-bottom: 2rem;">
+        <h3 style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--accent);">🔗 Link Collector</h3>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>How does Link Collector work?</h4>
+            <span class="faq-toggle">⌄</span>
+          </div>
+          <div class="faq-answer">
+            <p>Click the <strong>Link Collector</strong> button to scan the current page and extract all links. You'll see a list of all links found. You can filter by type, remove tracking parameters, and export as CSV or copy to clipboard.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>What are tracking parameters?</h4>
+            <span class="faq-toggle">⌄</span>
+          </div>
+          <div class="faq-answer">
+            <p>Tracking parameters are URL parameters used to track user clicks (e.g., utm_source, utm_medium, fbclid). When you enable <strong>Remove Tracking</strong>, Link Collector strips these parameters, giving you clean URLs.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>How do I export links as CSV?</h4>
+            <span class="faq-toggle">⌄</span>
+          </div>
+          <div class="faq-answer">
+            <p>After collecting links, click the <strong>Export CSV</strong> button in the Link Collector popup. A CSV file with all links will be downloaded to your computer, ready to open in Excel or Google Sheets.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Email Extractor FAQs -->
+      <div style="margin-bottom: 2rem;">
+        <h3 style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--accent);">📧 Email Extractor</h3>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>How do I extract emails from a website?</h4>
+            <span class="faq-toggle">⌄</span>
+          </div>
+          <div class="faq-answer">
+            <p>Click <strong>Email Extractor</strong> in the popup. It will automatically scan the webpage and find all email addresses. The extracted emails are displayed in a list where you can copy or manage them.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>Can I filter emails by domain?</h4>
+            <span class="faq-toggle">⌄</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes! In Email Extractor settings, you can add domains to filter for only specific email addresses. For example, filter for only @company.com emails.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>Are duplicate emails removed?</h4>
+            <span class="faq-toggle">⌄</span>
+          </div>
+          <div class="faq-answer">
+            <p>Absolutely! Email Extractor automatically deduplicates the email list, so you won't have multiple copies of the same email address.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Other Tools FAQs -->
+      <div style="margin-bottom: 2rem;">
+        <h3 style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--accent);">More Tools</h3>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>How does Table Extractor work?</h4>
+            <span class="faq-toggle">⌄</span>
+          </div>
+          <div class="faq-answer">
+            <p>Open Table Extractor and select any HTML table on the page. Click <strong>Convert to CSV</strong> and the table data will be formatted as CSV. You can then copy to clipboard or download as a file.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>What is Smart Links?</h4>
+            <span class="faq-toggle">⌄</span>
+          </div>
+          <div class="faq-answer">
+            <p>Smart Links automatically converts plain text URLs (like www.example.com) into clickable links. You can enable/disable it per website in the settings, or turn it off globally.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>How do I use Hover Zoom?</h4>
+            <span class="faq-toggle">⌄</span>
+          </div>
+          <div class="faq-answer">
+            <p>Enable Hover Zoom in settings, then <strong>hover over any image or video</strong> on a webpage. It will zoom in based on your configured scale factor. Customize the zoom level and delay in settings.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>Is Password Reveal enabled by default?</h4>
+            <span class="faq-toggle">⌄</span>
+          </div>
+          <div class="faq-answer">
+            <p>No, Password Reveal is <strong>disabled by default</strong> for security. To enable it, go to settings and toggle it on. When enabled, press the configured modifier key (Alt, Ctrl, Shift) over a password field to reveal it. Banking sites remain protected.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>What does Text Case Tools do?</h4>
+            <span class="faq-toggle">⌄</span>
+          </div>
+          <div class="faq-answer">
+            <p>Select any text on a webpage and right-click. Choose <strong>Text Case Tools</strong> to convert it to UPPERCASE, lowercase, Title Case, camelCase, snake_case, or kebab-case.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GENERAL FAQ ========== -->
+  <section style="max-width: 1200px; margin: 0 auto; padding: 3rem 2rem;">
+    <h2 class="section-title">General Questions</h2>
+
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question">
+          <h4>Is AzAd BrowserKit free?</h4>
+          <span class="faq-toggle">⌄</span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes! AzAd BrowserKit is <strong>completely free and open-source</strong>. There are no ads, no premium features, and no hidden costs. It's available under the MIT License.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <h4>Does it work offline?</h4>
+          <span class="faq-toggle">⌄</span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes! Most features work completely offline. Your settings are stored locally using Chrome's storage API and synced across devices if you're signed into Chrome.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <h4>Is my data safe?</h4>
+          <span class="faq-toggle">⌄</span>
+        </div>
+        <div class="faq-answer">
+          <p>Your data is completely safe. AzAd BrowserKit processes everything locally on your machine. We don't collect, store, or transmit any of your data to external servers. All processing happens in your browser.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <h4>Can I use it on other Chromium browsers?</h4>
+          <span class="faq-toggle">⌄</span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes! AzAd BrowserKit works on any Chromium-based browser including Chrome, Edge, Brave, Vivaldi, and Chromium. Search for "AzAd BrowserKit" in your browser's extension store.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <h4>How do I report a bug or request a feature?</h4>
+          <span class="faq-toggle">⌄</span>
+        </div>
+        <div class="faq-answer">
+          <p>Please visit our <a href="https://github.com/ayyazahmad/AzAd-BrowserKit/issues" target="_blank" style="color: var(--accent); font-weight: 600;">GitHub Issues page</a> to report bugs or request features. Provide details about what happened and steps to reproduce the issue.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <h4>Can I contribute to the project?</h4>
+          <span class="faq-toggle">⌄</span>
+        </div>
+        <div class="faq-answer">
+          <p>Absolutely! We'd love your contributions. Check our <a href="https://github.com/ayyazahmad/AzAd-BrowserKit/blob/main/CONTRIBUTING.md" target="_blank" style="color: var(--accent); font-weight: 600;">Contributing Guidelines</a> to get started.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section class="contact-section">
+    <h2 class="section-title">Still Have Questions?</h2>
+    <p class="section-subtitle">Get in touch with us through any of these channels</p>
+
+    <div class="contact-methods">
+      <div class="contact-card">
+        <h4 style="margin-bottom: 1rem; font-size: 1.1rem;">🐙 GitHub Issues</h4>
+        <p style="margin-bottom: 1.5rem; font-size: 0.9rem;">Report bugs, request features, or discuss improvements</p>
+        <a href="https://github.com/ayyazahmad/AzAd-BrowserKit/issues" target="_blank" rel="noopener">Visit GitHub Issues</a>
+      </div>
+
+      <div class="contact-card">
+        <h4 style="margin-bottom: 1rem; font-size: 1.1rem;">💬 Discussions</h4>
+        <p style="margin-bottom: 1.5rem; font-size: 0.9rem;">Join community discussions and share feedback</p>
+        <a href="https://github.com/ayyazahmad/AzAd-BrowserKit/discussions" target="_blank" rel="noopener">View Discussions</a>
+      </div>
+
+      <div class="contact-card">
+        <h4 style="margin-bottom: 1rem; font-size: 1.1rem;">📧 Email</h4>
+        <p style="margin-bottom: 1.5rem; font-size: 0.9rem;">For general inquiries and support</p>
+        <a href="mailto:info@azad.co">info@azad.co</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+        <div class="footer-section">
+          <h4>About</h4>
+          <p style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">AzAd BrowserKit is a free, open-source Chrome extension packed with developer tools.</p>
+          <div class="social-links">
+            <a href="https://github.com/ayyazahmad/AzAd-BrowserKit" target="_blank" rel="noopener" title="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.493.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="https://github.com/ayyazahmad/AzAd-BrowserKit/blob/main/DEVELOPERS.md" target="_blank">Developer Docs</a></li>
+            <li><a href="https://github.com/ayyazahmad/AzAd-BrowserKit/blob/main/CHANGELOG.md" target="_blank">Changelog</a></li>
+            <li><a href="https://github.com/ayyazahmad/AzAd-BrowserKit/blob/main/CONTRIBUTING.md" target="_blank">Contribute</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="https://github.com/ayyazahmad/AzAd-BrowserKit/blob/main/LICENSE" target="_blank">License (MIT)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 AzAd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== SCROLL TO TOP BUTTON ========== -->
+  <button id="scrollToTopBtn" style="display: none; position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--accent)); color: white; border: none; cursor: pointer; font-size: 1.5rem; z-index: 999; transition: all 0.3s ease;">↑</button>
+
+  <!-- JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+title: AzAd BrowserKit
+description: Powerful Developer Tools for Chrome - Color Picker, Font Inspector, Link Collector, Email Extractor, and more
+author: Ayyaz Ahmad
+url: https://ayyazahmad.github.io/AzAd-BrowserKit/
+
+# Theme settings (using custom CSS, no Jekyll theme)
+theme: null
+markdown: kramdown
+
+# GitHub Pages settings
+github:
+  is_project_page: true
+  repository_url: https://github.com/ayyazahmad/AzAd-BrowserKit
+
+# Build settings
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude files/folders from build
+exclude:
+  - README.md
+  - CHANGELOG.md
+  - node_modules
+  - package.json
+  - .git
+  - .gitignore
+
+# Collections
+collections:
+  features:
+    output: false
