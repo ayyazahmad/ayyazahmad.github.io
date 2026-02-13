@@ -50,12 +50,12 @@ window.addEventListener('scroll', () => {
 // =========== SET ACTIVE NAV LINK ===========
 document.querySelectorAll('nav a').forEach(link => {
   const href = link.getAttribute('href');
-  
+
   // Remove protocol and domain to compare paths
   const currentPath = window.location.pathname;
   const currentFile = currentPath.split('/').pop() || 'index.html';
   const linkFile = href.split('/').pop();
-  
+
   if (linkFile === currentFile) {
     link.classList.add('active');
   }
@@ -68,7 +68,7 @@ const faqSearch = document.getElementById('faqSearch');
 faqItems.forEach(item => {
   const question = item.querySelector('.faq-question');
   const answer = item.querySelector('.faq-answer');
-  
+
   if (question) {
     question.addEventListener('click', () => {
       // Close all other items
@@ -78,7 +78,7 @@ faqItems.forEach(item => {
           otherItem.querySelector('.faq-answer').classList.remove('active');
         }
       });
-      
+
       // Toggle current item
       question.classList.toggle('active');
       answer.classList.toggle('active');
@@ -90,14 +90,14 @@ faqItems.forEach(item => {
 if (faqSearch) {
   faqSearch.addEventListener('input', (e) => {
     const searchTerm = e.target.value.toLowerCase();
-    
+
     faqItems.forEach(item => {
       const question = item.querySelector('.faq-question h4');
       const answer = item.querySelector('.faq-answer p');
-      
+
       const questionText = question ? question.textContent.toLowerCase() : '';
       const answerText = answer ? answer.textContent.toLowerCase() : '';
-      
+
       if (questionText.includes(searchTerm) || answerText.includes(searchTerm)) {
         item.style.display = '';
       } else {
@@ -111,7 +111,7 @@ if (faqSearch) {
 document.querySelectorAll('.copy-btn').forEach(btn => {
   btn.addEventListener('click', (e) => {
     const textToCopy = btn.getAttribute('data-copy');
-    
+
     navigator.clipboard.writeText(textToCopy).then(() => {
       const originalText = btn.innerHTML;
       btn.innerHTML = '✓ Copied!';
@@ -127,7 +127,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     const href = this.getAttribute('href');
     if (href === '#') return;
-    
+
     const target = document.querySelector(href);
     if (target) {
       e.preventDefault();
@@ -161,23 +161,23 @@ const contactForm = document.getElementById('contactForm');
 if (contactForm) {
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    
+
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const message = document.getElementById('message').value;
-    
+
     if (name && email && message) {
       // Construct mailto link
       const subject = encodeURIComponent('AzAd BrowserKit - Support Request');
       const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-      window.location.href = `mailto:contact@example.com?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:info@azad.co?subject=${subject}&body=${body}`;
     }
   });
 }
 
 // =========== FEATURE CARD CLICK HANDLER ===========
 document.querySelectorAll('.feature-card').forEach(card => {
-  card.addEventListener('click', function() {
+  card.addEventListener('click', function () {
     // Could open a modal or scroll to detailed section
     const featureName = this.querySelector('h3').textContent;
     console.log('Feature clicked:', featureName);

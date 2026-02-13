@@ -259,7 +259,7 @@ const PROJECTS_DATA = [
     features: ["Color Picker", "Font Inspector", "Link Collector", "Email Extractor", "Table Extractor", "Hover Zoom"],
     links: {
       github: "https://github.com/ayyazahmad/AzAd-BrowserKit",
-      store: "https://chrome.google.com/webstore"
+      store: "https://chromewebstore.google.com/detail/azad-browserkit/fpoeafhnjjhpicifmdpcfbnlofpompcf"
     }
   },
   {
