@@ -3,10 +3,10 @@
    ======================================== */
 
 :root {
-  --primary: #6A4FB3;
-  --primary-dark: #3B1D6D;
-  --accent: #5EC8F2;
-  --accent-dark: #3B1D6D;
+  --primary: #00a8a8;
+  --primary-dark: #008080;
+  --accent: #00d9ff;
+  --accent-dark: #00b3cc;
   --bg-dark: #0f172a;
   --bg-light: #f8fafc;
   --text-dark: #1e293b;
@@ -1080,8 +1080,8 @@ body.light-mode .theme-toggle {
     font-size: 1.8rem;
   }
 
-    .btn-install,
-    .btn-primary,
+  .btn-install,
+  .btn-primary,
   .btn-secondary {
     width: 100%;
   }

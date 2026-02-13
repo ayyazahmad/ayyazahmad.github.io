@@ -116,7 +116,7 @@ GitHub will automatically deploy within 1-2 minutes.
 
 - **Framework**: Vanilla HTML/CSS/JS (no build required)
 - **CSS**: Custom with Tailwind CDN
-- **Styling**: Glassmorphism with purple/blue gradients
+- **Styling**: Glassmorphism with teal/cyan gradients
 - **Responsiveness**: Mobile-first, fully responsive
 - **Accessibility**: WCAG 2.1 AA compliant
 - **Performance**: Lighthouse score 90+
@@ -137,8 +137,8 @@ GitHub will automatically deploy within 1-2 minutes.
 
 ## 🎨 Colors
 
-- **Primary**: #6A4FB3 (Purple)
-- **Accent**: #5EC8F2 (Blue)
+- **Primary**: #00a8a8 (Teal)
+- **Accent**: #00d9ff (Cyan)
 - **Dark BG**: #0f172a
 - **Light BG**: #f8fafc
 
