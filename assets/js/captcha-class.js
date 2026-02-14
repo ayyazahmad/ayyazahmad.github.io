@@ -40,7 +40,7 @@ class SimpleCaptcha {
     // Show input when checkbox is checked
     checkbox.addEventListener('change', (e) => {
       if (e.target.checked) {
-        answerInput.style.display = 'block';
+        answerInput.style.display = 'inline-block';
         answerInput.focus();
       } else {
         answerInput.style.display = 'none';
@@ -59,11 +59,11 @@ class SimpleCaptcha {
         this.isValid = true;
         errorDiv.style.display = 'none';
         answerInput.style.borderColor = '#10b981';
-        answerInput.style.background = '#f0fdf4';
+        answerInput.style.backgroundColor = '#f0fdf4';
       } else {
         this.isValid = false;
         answerInput.style.borderColor = '#d1d5db';
-        answerInput.style.background = '#ffffff';
+        answerInput.style.backgroundColor = '#ffffff';
       }
     });
     
@@ -89,7 +89,7 @@ class SimpleCaptcha {
     if (answerInput) {
       answerInput.value = '';
       answerInput.style.borderColor = '#d1d5db';
-      answerInput.style.background = '#ffffff';
+      answerInput.style.backgroundColor = '#ffffff';
     }
     if (errorDiv) errorDiv.style.display = 'none';
     
