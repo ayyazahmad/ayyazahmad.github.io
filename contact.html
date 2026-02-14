@@ -212,14 +212,15 @@
                                             
                                             .captcha-checkbox {
                                                 appearance: none;
-                                                width: 24px;
-                                                height: 24px;
+                                                width: 20px;
+                                                height: 20px;
                                                 border: 2px solid #bdbdbd;
                                                 border-radius: 4px;
                                                 cursor: pointer;
                                                 background: white;
                                                 transition: all 0.2s ease;
                                                 flex-shrink: 0;
+                                                position: relative;
                                             }
                                             
                                             .captcha-checkbox:hover {
@@ -232,14 +233,16 @@
                                                 box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
                                             }
                                             
-                                            .captcha-checkbox:checked::after {
+                                            .captcha-checkbox:checked::before {
                                                 content: '✓';
-                                                display: flex;
-                                                align-items: center;
-                                                justify-content: center;
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                transform: translate(-50%, -50%);
                                                 color: white;
                                                 font-weight: bold;
-                                                font-size: 14px;
+                                                font-size: 12px;
+                                                line-height: 1;
                                             }
                                             
                                             .captcha-label {
@@ -258,6 +261,7 @@
                                                 gap: 6px;
                                                 font-size: 15px;
                                                 color: #424242;
+                                                flex-wrap: wrap;
                                             }
                                             
                                             .captcha-number {
@@ -273,7 +277,7 @@
                                             
                                             .captcha-answer {
                                                 display: none;
-                                                width: 65px;
+                                                width: 100px;
                                                 padding: 8px 12px;
                                                 border: 2px solid #e0e0e0;
                                                 border-radius: 6px;
@@ -284,6 +288,17 @@
                                                 background: white;
                                                 color: #1a1a1a;
                                                 margin-left: 4px;
+                                            }
+                                            
+                                            /* Remove number input spinners */
+                                            .captcha-answer::-webkit-outer-spin-button,
+                                            .captcha-answer::-webkit-inner-spin-button {
+                                                -webkit-appearance: none;
+                                                margin: 0;
+                                            }
+                                            
+                                            .captcha-answer[type=number] {
+                                                -moz-appearance: textfield;
                                             }
                                             
                                             .captcha-answer:focus {
