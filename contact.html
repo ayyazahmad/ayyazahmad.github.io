@@ -220,6 +220,7 @@
                                                 background: white;
                                                 transition: all 0.2s ease;
                                                 flex-shrink: 0;
+                                                position: relative;
                                             }
                                             
                                             .captcha-checkbox:hover {
@@ -232,14 +233,16 @@
                                                 box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
                                             }
                                             
-                                            .captcha-checkbox:checked::after {
+                                            .captcha-checkbox:checked::before {
                                                 content: '✓';
-                                                display: flex;
-                                                align-items: center;
-                                                justify-content: center;
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                transform: translate(-50%, -50%);
                                                 color: white;
                                                 font-weight: bold;
-                                                font-size: 14px;
+                                                font-size: 13px;
+                                                line-height: 1;
                                             }
                                             
                                             .captcha-label {
@@ -273,7 +276,6 @@
                                             }
                                             
                                             .captcha-answer {
-                                                display: none;
                                                 width: 65px;
                                                 padding: 8px 12px;
                                                 border: 2px solid #e0e0e0;
@@ -284,7 +286,7 @@
                                                 transition: all 0.2s ease;
                                                 background: white;
                                                 color: #1a1a1a;
-                                                margin-top: 10px;
+                                                display: none;
                                             }
                                             
                                             .captcha-answer:focus {
@@ -320,25 +322,32 @@
                                         </style>
                                         
                                         <div class="captcha-box">
-                                            <div style="display: flex; align-items: flex-start; gap: 14px;">
-                                                <!-- Checkbox -->
-                                                <input type="checkbox" id="captchaCheck" class="captcha-checkbox" style="margin-top: 2px;">
-                                                
-                                                <!-- Content -->
-                                                <div style="flex: 1; min-width: 0;">
-                                                    <div class="captcha-label">
-                                                        <i class="fas fa-shield-alt" style="color: #667eea; font-size: 14px;"></i>
-                                                        Verify you're human
+                                            <div style="display: flex; align-items: center; justify-content: space-between; gap: 20px;">
+                                                <!-- Left Section -->
+                                                <div style="display: flex; align-items: flex-start; gap: 14px; flex: 1;">
+                                                    <!-- Checkbox -->
+                                                    <input type="checkbox" id="captchaCheck" class="captcha-checkbox" style="margin-top: 2px;">
+                                                    
+                                                    <!-- Content -->
+                                                    <div style="min-width: 0;">
+                                                        <div class="captcha-label">
+                                                            <i class="fas fa-shield-alt" style="color: #667eea; font-size: 14px;"></i>
+                                                            Verify you're human
+                                                        </div>
+                                                        <div class="captcha-challenge">
+                                                            <span>What is</span>
+                                                            <span class="captcha-number"><span id="num1">0</span></span>
+                                                            <span>+</span>
+                                                            <span class="captcha-number"><span id="num2">0</span></span>
+                                                            <span>?</span>
+                                                        </div>
+                                                        <div id="captchaError" class="captcha-error"></div>
                                                     </div>
-                                                    <div class="captcha-challenge">
-                                                        <span>What is</span>
-                                                        <span class="captcha-number"><span id="num1">0</span></span>
-                                                        <span>+</span>
-                                                        <span class="captcha-number"><span id="num2">0</span></span>
-                                                        <span>?</span>
-                                                    </div>
+                                                </div>
+
+                                                <!-- Right Section - Answer Field -->
+                                                <div style="display: flex; align-items: center; justify-content: flex-end;">
                                                     <input type="number" id="captchaAnswer" class="captcha-answer" placeholder="?" min="0" max="20">
-                                                    <div id="captchaError" class="captcha-error"></div>
                                                 </div>
                                             </div>
                                         </div>

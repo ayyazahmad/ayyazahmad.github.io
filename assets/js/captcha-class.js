@@ -37,10 +37,13 @@ class SimpleCaptcha {
       return;
     }
     
+    // Initially hide answer input
+    answerInput.style.display = 'none';
+    
     // Show input when checkbox is checked
     checkbox.addEventListener('change', (e) => {
       if (e.target.checked) {
-        answerInput.style.display = 'inline-block';
+        answerInput.style.display = 'block';
         answerInput.focus();
       } else {
         answerInput.style.display = 'none';
