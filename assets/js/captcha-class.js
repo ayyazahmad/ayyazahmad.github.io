@@ -58,12 +58,10 @@ class SimpleCaptcha {
       if (userAnswer === correctAnswer && answerInput.value.trim() !== '') {
         this.isValid = true;
         errorDiv.style.display = 'none';
-        answerInput.style.borderColor = '#10b981';
-        answerInput.style.backgroundColor = '#f0fdf4';
+        answerInput.classList.add('valid');
       } else {
         this.isValid = false;
-        answerInput.style.borderColor = '#d1d5db';
-        answerInput.style.backgroundColor = '#ffffff';
+        answerInput.classList.remove('valid');
       }
     });
     
@@ -88,8 +86,7 @@ class SimpleCaptcha {
     if (num2El) num2El.textContent = this.num2;
     if (answerInput) {
       answerInput.value = '';
-      answerInput.style.borderColor = '#d1d5db';
-      answerInput.style.backgroundColor = '#ffffff';
+      answerInput.classList.remove('valid');
     }
     if (errorDiv) errorDiv.style.display = 'none';
     
