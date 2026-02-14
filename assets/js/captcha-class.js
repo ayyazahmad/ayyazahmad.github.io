@@ -40,10 +40,8 @@ class SimpleCaptcha {
     // Show input when checkbox is checked
     checkbox.addEventListener('change', (e) => {
       if (e.target.checked) {
-        answerInput.style.display = 'inline-block';
         answerInput.focus();
       } else {
-        answerInput.style.display = 'none';
         answerInput.value = '';
         errorDiv.style.display = 'none';
         this.isValid = false;
