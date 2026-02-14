@@ -197,40 +197,44 @@
                                     <div class="form-group" style="margin-bottom: 20px;">
                                         <style>
                                             .captcha-box {
-                                                border: 1px solid #e0e0e0;
-                                                border-radius: 12px;
-                                                padding: 18px 20px;
-                                                background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-                                                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-                                                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                                                border: 1px solid #e5e7eb;
+                                                border-radius: 8px;
+                                                padding: 16px;
+                                                background: #f9fafb;
+                                                transition: all 0.3s ease;
                                             }
                                             
                                             .captcha-box:hover {
-                                                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-                                                border-color: #d0d0d0;
+                                                border-color: #d1d5db;
+                                                background: #ffffff;
+                                            }
+                                            
+                                            .captcha-header {
+                                                display: flex;
+                                                align-items: center;
+                                                gap: 12px;
+                                                margin-bottom: 12px;
                                             }
                                             
                                             .captcha-checkbox {
                                                 appearance: none;
-                                                width: 22px;
-                                                height: 22px;
-                                                border: 2px solid #bdbdbd;
-                                                border-radius: 4px;
+                                                width: 20px;
+                                                height: 20px;
+                                                border: 2px solid #d1d5db;
+                                                border-radius: 3px;
                                                 cursor: pointer;
                                                 background: white;
                                                 transition: all 0.2s ease;
                                                 flex-shrink: 0;
-                                                margin-top: 0px;
                                             }
                                             
                                             .captcha-checkbox:hover {
-                                                border-color: #9c9c9c;
+                                                border-color: #9ca3af;
                                             }
                                             
                                             .captcha-checkbox:checked {
-                                                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                                                background: #667eea;
                                                 border-color: #667eea;
-                                                box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
                                             }
                                             
                                             .captcha-checkbox:checked::after {
@@ -240,64 +244,53 @@
                                                 justify-content: center;
                                                 color: white;
                                                 font-weight: bold;
-                                                font-size: 14px;
+                                                font-size: 12px;
                                             }
                                             
-                                            .captcha-label {
+                                            .captcha-title {
                                                 font-weight: 500;
-                                                color: #1a1a1a;
-                                                font-size: 15px;
-                                                margin-bottom: 8px;
-                                                display: flex;
-                                                align-items: center;
-                                                gap: 8px;
+                                                color: #1f2937;
+                                                font-size: 14px;
                                             }
                                             
                                             .captcha-challenge {
                                                 display: flex;
                                                 align-items: center;
                                                 gap: 8px;
-                                                font-size: 15px;
-                                                color: #424242;
-                                                flex-wrap: wrap;
+                                                font-size: 14px;
+                                                color: #374151;
+                                                margin-left: 32px;
                                             }
                                             
                                             .captcha-number {
-                                                font-weight: 700;
-                                                color: #1976d2;
-                                                min-width: 28px;
-                                                text-align: center;
-                                                background: rgba(25, 118, 210, 0.08);
-                                                padding: 2px 6px;
-                                                border-radius: 4px;
-                                                font-size: 16px;
+                                                font-weight: 600;
+                                                color: #1f2937;
+                                                min-width: 24px;
                                             }
                                             
                                             .captcha-answer {
                                                 display: none;
-                                                width: 100px;
-                                                padding: 10px 14px;
-                                                border: 2px solid #e0e0e0;
-                                                border-radius: 6px;
-                                                font-size: 15px;
+                                                width: 80px;
+                                                padding: 7px 10px;
+                                                border: 1px solid #d1d5db;
+                                                border-radius: 4px;
+                                                font-size: 14px;
                                                 text-align: center;
-                                                font-weight: 600;
+                                                font-weight: 500;
                                                 transition: all 0.2s ease;
                                                 background: white;
-                                                color: #1a1a1a;
-                                                margin-left: 0px;
+                                                color: #1f2937;
                                             }
                                             
                                             .captcha-answer:focus {
                                                 outline: none;
                                                 border-color: #667eea;
-                                                box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+                                                box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
                                             }
                                             
                                             .captcha-answer.valid {
                                                 border-color: #10b981;
-                                                background: rgba(16, 185, 129, 0.08);
-                                                color: #059669;
+                                                background: #ecfdf5;
                                             }
                                             
                                             .captcha-error {
@@ -305,43 +298,24 @@
                                                 color: #dc2626;
                                                 font-size: 12px;
                                                 margin-top: 6px;
-                                                animation: slideDown 0.2s ease;
-                                            }
-                                            
-                                            @keyframes slideDown {
-                                                from {
-                                                    opacity: 0;
-                                                    transform: translateY(-4px);
-                                                }
-                                                to {
-                                                    opacity: 1;
-                                                    transform: translateY(0);
-                                                }
+                                                margin-left: 32px;
                                             }
                                         </style>
                                         
                                         <div class="captcha-box">
-                                            <div style="display: flex; align-items: center; gap: 14px;">
-                                                <!-- Checkbox -->
+                                            <div class="captcha-header">
                                                 <input type="checkbox" id="captchaCheck" class="captcha-checkbox">
-                                                
-                                                <!-- Content -->
-                                                <div style="flex: 1; min-width: 0;">
-                                                    <div class="captcha-label">
-                                                        <i class="fas fa-shield-alt" style="color: #667eea; font-size: 14px;"></i>
-                                                        Verify you're human
-                                                    </div>
-                                                    <div class="captcha-challenge">
-                                                        <span>What is</span>
-                                                        <span class="captcha-number"><span id="num1">0</span></span>
-                                                        <span>+</span>
-                                                        <span class="captcha-number"><span id="num2">0</span></span>
-                                                        <span>?</span>
-                                                        <input type="number" id="captchaAnswer" class="captcha-answer" placeholder="?" min="0" max="20">
-                                                    </div>
-                                                    <div id="captchaError" class="captcha-error"></div>
-                                                </div>
+                                                <span class="captcha-title">Verify you're human</span>
                                             </div>
+                                            <div class="captcha-challenge">
+                                                <span>What is</span>
+                                                <span class="captcha-number"><span id="num1">0</span></span>
+                                                <span>+</span>
+                                                <span class="captcha-number"><span id="num2">0</span></span>
+                                                <span>?</span>
+                                                <input type="number" id="captchaAnswer" class="captcha-answer" placeholder="?" min="0" max="20">
+                                            </div>
+                                            <div id="captchaError" class="captcha-error"></div>
                                         </div>
                                     </div>
                                 </div>
