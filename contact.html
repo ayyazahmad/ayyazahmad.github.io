@@ -210,35 +210,40 @@
                                                 border-color: #d0d0d0;
                                             }
                                             
-                                            .captcha-checkbox {
-                                                appearance: none;
+                                            .captcha-checkbox-wrapper {
+                                                display: inline-flex;
+                                                align-items: center;
+                                                cursor: pointer;
+                                                position: relative;
+                                            }
+                                            
+                                            .captcha-checkbox-wrapper input {
+                                                display: none;
+                                            }
+                                            
+                                            .captcha-checkbox-wrapper input + .checkbox-custom {
                                                 width: 18px;
                                                 height: 18px;
                                                 border: 2px solid #bdbdbd;
                                                 border-radius: 3px;
-                                                cursor: pointer;
                                                 background: white;
-                                                transition: all 0.2s ease;
                                                 flex-shrink: 0;
-                                                position: relative;
+                                                transition: all 0.2s ease;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
                                             }
                                             
-                                            .captcha-checkbox:hover {
+                                            .captcha-checkbox-wrapper input:hover + .checkbox-custom {
                                                 border-color: #9c9c9c;
                                             }
                                             
-                                            .captcha-checkbox:checked {
-                                                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                                            .captcha-checkbox-wrapper input:checked + .checkbox-custom {
+                                                background: #667eea;
                                                 border-color: #667eea;
-                                                box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
-                                                background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polyline points="3,8 6,11 13,4" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
-                                                background-size: contain;
-                                                background-repeat: no-repeat;
-                                                background-position: center;
-                                            }
-                                            
-                                            .captcha-checkbox:checked::after {
-                                                content: '';
+                                                color: white;
+                                                font-size: 12px;
+                                                font-weight: bold;
                                             }
                                             
                                             .captcha-label {
@@ -322,7 +327,10 @@
                                                 <!-- Left Side: Checkbox and Challenge -->
                                                 <div style="display: flex; align-items: center; gap: 14px; flex: 1;">
                                                     <!-- Checkbox -->
-                                                    <input type="checkbox" id="captchaCheck" class="captcha-checkbox">
+                                                    <label class="captcha-checkbox-wrapper">
+                                                        <input type="checkbox" id="captchaCheck">
+                                                        <span class="checkbox-custom">✓</span>
+                                                    </label>
                                                     
                                                     <!-- Content -->
                                                     <div style="flex: 1; min-width: 0;">
