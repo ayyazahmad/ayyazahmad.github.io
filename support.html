@@ -289,286 +289,25 @@
                 </div>
             </div>
 
-            <div class="row">
-                <!-- Left Column FAQs -->
-                <div class="col-lg-6">
-                    <div class="faq-style-one-items">
-                        <div class="accordion mt-30" id="faqAccordionLeft">
-                            <!-- Installation & Setup -->
-                            <div class="accordion-item accordion-style-one">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true">
-                                        How do I install AzAd Browser Kit?
-                                    </button>
-                                </h2>
-                                <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordionLeft">
-                                    <div class="accordion-body">
-                                        Visit the browser extension store for your browser (Chrome Web Store, Firefox Add-ons, etc.), search for "AzAd Browser Kit", and click "Add to [Browser]". The extension will install automatically and appear in your extension menu.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item accordion-style-one">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
-                                        What browsers does AzAd Browser Kit support?
-                                    </button>
-                                </h2>
-                                <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordionLeft">
-                                    <div class="accordion-body">
-                                        AzAd Browser Kit officially supports Chrome, Edge, Firefox, and Opera. Safari support is in development. Check the extension page for your browser to see the latest compatibility information.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item accordion-style-one">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
-                                        Do I need Node.js for the image-optimizer?
-                                    </button>
-                                </h2>
-                                <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordionLeft">
-                                    <div class="accordion-body">
-                                        Yes. The image-optimizer requires Node.js 14+ and npm. Download Node.js from nodejs.org, then run <code>npm install</code> in the image-optimizer folder to set up dependencies.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item accordion-style-one">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
-                                        How do I set up Google Apps Script for forms?
-                                    </button>
-                                </h2>
-                                <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordionLeft">
-                                    <div class="accordion-body">
-                                        Visit our form-handlers documentation for a step-by-step guide. You'll need to create a Google Apps Script project, deploy it as a web app, and copy the webhook URL into your form configuration.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item accordion-style-one">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
-                                        What can ASO Suite Pro do?
-                                    </button>
-                                </h2>
-                                <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordionLeft">
-                                    <div class="accordion-body">
-                                        ASO Suite Pro is a WordPress admin security toolkit that provides security scanning, vulnerability detection, hardening recommendations, and security monitoring for WordPress sites. Visit asosuitepro.com for detailed features.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item accordion-style-one">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6">
-                                        How do I customize the CAPTCHA styling?
-                                    </button>
-                                </h2>
-                                <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#faqAccordionLeft">
-                                    <div class="accordion-body">
-                                        The CAPTCHA supports Material Design styling through CSS classes and inline styles. You can customize colors, sizing, fonts, and animations. See the CAPTCHA-UI documentation for detailed styling options and examples.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item accordion-style-one">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7">
-                                        How much can images be compressed?
-                                    </button>
-                                </h2>
-                                <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#faqAccordionLeft">
-                                    <div class="accordion-body">
-                                        Compression depends on the original format and quality. Typically: PNG files compress 30-70%, JPEG files 20-50%, and WebP conversion provides 40-80% additional savings. See actual results in the image-optimizer output logs.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item accordion-style-one">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8">
-                                        Can I use the image-optimizer in production?
-                                    </button>
-                                </h2>
-                                <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#faqAccordionLeft">
-                                    <div class="accordion-body">
-                                        Yes! The image-optimizer is production-ready. It's used in live environments and watches for changes automatically. Test it first in a development environment, then deploy to production with confidence.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item accordion-style-one">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9">
-                                        The extension isn't working. What should I do?
-                                    </button>
-                                </h2>
-                                <div id="collapse9" class="accordion-collapse collapse" data-bs-parent="#faqAccordionLeft">
-                                    <div class="accordion-body">
-                                        Try: 1) Refresh the page, 2) Disable and re-enable the extension, 3) Clear extension data and cookies, 4) Check if the site allows extensions, 5) Restart your browser. If issues persist, report on GitHub Issues with your browser version and error details.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item accordion-style-one">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10">
-                                        Why is my image not optimizing?
-                                    </button>
-                                </h2>
-                                <div id="collapse10" class="accordion-collapse collapse" data-bs-parent="#faqAccordionLeft">
-                                    <div class="accordion-body">
-                                        Check: 1) Asset folder path is correct in .image-optimizer.json, 2) Image format is supported (PNG, JPG, WebP, SVG, etc.), 3) File has write permissions, 4) Image isn't already optimized, 5) Watch mode is running. Run with <code>--verbose</code> flag for detailed logs.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <!-- General Services Section -->
+            <div class="row" style="margin-top: 40px;">
+                <div class="col-lg-12">
+                    <h3 style="text-align: center; margin-bottom: 30px; font-size: 24px; font-weight: 600;">General Services</h3>
                 </div>
+            </div>
 
-                <!-- Right Column FAQs -->
+            <div class="row">
+                <!-- General Left Column -->
                 <div class="col-lg-6">
                     <div class="faq-style-one-items">
-                        <div class="accordion mt-30" id="faqAccordionRight">
+                        <div class="accordion mt-30" id="faqAccordionGeneral1">
                             <div class="accordion-item accordion-style-one">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11">
-                                        How do I debug the contact form?
-                                    </button>
-                                </h2>
-                                <div id="collapse11" class="accordion-collapse collapse" data-bs-parent="#faqAccordionRight">
-                                    <div class="accordion-body">
-                                        Check browser console (F12 > Console tab) for JavaScript errors. Verify Google Apps Script endpoint URL is correct. Test form submission by checking Network tab. Enable verbose logging in form-handler.js. Check FORM-SYNC-CHECKLIST.md for verification steps.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item accordion-style-one">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12">
-                                        Why is CAPTCHA not showing?
-                                    </button>
-                                </h2>
-                                <div id="collapse12" class="accordion-collapse collapse" data-bs-parent="#faqAccordionRight">
-                                    <div class="accordion-body">
-                                        Verify: 1) captcha-class.js is loaded, 2) DOM elements have correct IDs (#captchaCheck, #captchaAnswer, etc.), 3) JavaScript isn't throwing errors (check console), 4) CSS isn't hidden (.captcha-box display property), 5) Form ID matches configuration.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item accordion-style-one">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse13">
-                                        What data does the browser extension collect?
-                                    </button>
-                                </h2>
-                                <div id="collapse13" class="accordion-collapse collapse" data-bs-parent="#faqAccordionRight">
-                                    <div class="accordion-body">
-                                        The AzAd Browser Kit collects only data necessary for functionality (browser history, downloads, active tabs). No personal data is sold. All data stays on your device. See our Privacy Policy for complete details.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item accordion-style-one">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse14">
-                                        Is my form data encrypted?
-                                    </button>
-                                </h2>
-                                <div id="collapse14" class="accordion-collapse collapse" data-bs-parent="#faqAccordionRight">
-                                    <div class="accordion-body">
-                                        Form submissions are sent over HTTPS (encrypted in transit). Data is stored in your Google Drive (if using Google Apps Script). No data is stored on our servers. You control where and how your data is stored.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item accordion-style-one">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse15">
-                                        Do you track my usage?
-                                    </button>
-                                </h2>
-                                <div id="collapse15" class="accordion-collapse collapse" data-bs-parent="#faqAccordionRight">
-                                    <div class="accordion-body">
-                                        No usage tracking or analytics are implemented in our tools. We don't monitor how you use the extensions or tools. You can use everything completely anonymously.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item accordion-style-one">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse16">
-                                        Can I delete my submission data?
-                                    </button>
-                                </h2>
-                                <div id="collapse16" class="accordion-collapse collapse" data-bs-parent="#faqAccordionRight">
-                                    <div class="accordion-body">
-                                        Yes. Form submissions are stored in your Google Sheet (if you set that up). You can delete responses directly from your Google Sheet. We don't store submission data on our servers.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item accordion-style-one">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse17">
-                                        Which WordPress versions are compatible?
-                                    </button>
-                                </h2>
-                                <div id="collapse17" class="accordion-collapse collapse" data-bs-parent="#faqAccordionRight">
-                                    <div class="accordion-body">
-                                        ASO Suite Pro supports WordPress 5.0+. For best results, use the latest WordPress version with all security updates. Check the ASO Suite Pro documentation for any version-specific requirements.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item accordion-style-one">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse18">
-                                        Do these tools work offline?
-                                    </button>
-                                </h2>
-                                <div id="collapse18" class="accordion-collapse collapse" data-bs-parent="#faqAccordionRight">
-                                    <div class="accordion-body">
-                                        Browser extensions require internet connection for active/ongoing features. The image-optimizer works offline for local processing. Forms require internet to submit. Tools don't require external APIs beyond what you configure.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item accordion-style-one">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse19">
-                                        What's the maximum image file size?
-                                    </button>
-                                </h2>
-                                <div id="collapse19" class="accordion-collapse collapse" data-bs-parent="#faqAccordionRight">
-                                    <div class="accordion-body">
-                                        The image-optimizer can process images up to system memory limits (typically 2-8GB+). No artificial file size limit is enforced. Larger files take longer to process. RAM available on your system is the practical limit.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item accordion-style-one">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse20">
-                                        Are there rate limits?
-                                    </button>
-                                </h2>
-                                <div id="collapse20" class="accordion-collapse collapse" data-bs-parent="#faqAccordionRight">
-                                    <div class="accordion-body">
-                                        No rate limits on our tools themselves. If using Google Apps Script for forms, Google has quotas (see Google Apps Script documentation). Image-optimizer processes as fast as your hardware allows.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item accordion-style-one">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse21">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#g-collapse1" aria-expanded="true">
                                         Is everything free?
                                     </button>
                                 </h2>
-                                <div id="collapse21" class="accordion-collapse collapse" data-bs-parent="#faqAccordionRight">
+                                <div id="g-collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordionGeneral1">
                                     <div class="accordion-body">
                                         Most tools are free, including: AzAd Browser Kit, image-optimizer, form handlers, and contact form with CAPTCHA. We offer Community support (free) and paid support plans (Professional/Enterprise) for those who need priority assistance.
                                     </div>
@@ -577,11 +316,11 @@
 
                             <div class="accordion-item accordion-style-one">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse22">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#g-collapse2">
                                         Can I use these commercially?
                                     </button>
                                 </h2>
-                                <div id="collapse22" class="accordion-collapse collapse" data-bs-parent="#faqAccordionRight">
+                                <div id="g-collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordionGeneral1">
                                     <div class="accordion-body">
                                         Yes! All tools are provided under MIT License or similar permissive licenses. You can use them in commercial projects, client work, and business applications without restrictions.
                                     </div>
@@ -590,11 +329,11 @@
 
                             <div class="accordion-item accordion-style-one">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse23">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#g-collapse3">
                                         Can I modify the code?
                                     </button>
                                 </h2>
-                                <div id="collapse23" class="accordion-collapse collapse" data-bs-parent="#faqAccordionRight">
+                                <div id="g-collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordionGeneral1">
                                     <div class="accordion-body">
                                         Yes, the code is open source. You can modify, adapt, and extend everything for your needs. If you improve the code, consider submitting pull requests back to the project.
                                     </div>
@@ -603,11 +342,11 @@
 
                             <div class="accordion-item accordion-style-one">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse24">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#g-collapse4">
                                         Do I need to credit you?
                                     </button>
                                 </h2>
-                                <div id="collapse24" class="accordion-collapse collapse" data-bs-parent="#faqAccordionRight">
+                                <div id="g-collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordionGeneral1">
                                     <div class="accordion-body">
                                         No credit required, but it's appreciated! You're free to use everything without attribution. If you mention AzAd or link to our project, we'd love that, but it's completely optional.
                                     </div>
@@ -616,11 +355,11 @@
 
                             <div class="accordion-item accordion-style-one">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse25">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#g-collapse5">
                                         How do I report a bug?
                                     </button>
                                 </h2>
-                                <div id="collapse25" class="accordion-collapse collapse" data-bs-parent="#faqAccordionRight">
+                                <div id="g-collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordionGeneral1">
                                     <div class="accordion-body">
                                         Report bugs on GitHub Issues. Include: 1) Browser/OS version, 2) Steps to reproduce, 3) Expected vs actual behavior, 4) Screenshots if applicable, 5) Relevant error messages from console.
                                     </div>
@@ -629,24 +368,31 @@
 
                             <div class="accordion-item accordion-style-one">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse26">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#g-collapse6">
                                         Can I request a feature?
                                     </button>
                                 </h2>
-                                <div id="collapse26" class="accordion-collapse collapse" data-bs-parent="#faqAccordionRight">
+                                <div id="g-collapse6" class="accordion-collapse collapse" data-bs-parent="#faqAccordionGeneral1">
                                     <div class="accordion-body">
                                         Yes! Submit feature requests on GitHub Issues, or if you have a Professional/Enterprise plan, we prioritize feature requests. Describe the feature, why you need it, and how it would benefit users.
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- General Right Column -->
+                <div class="col-lg-6">
+                    <div class="faq-style-one-items">
+                        <div class="accordion mt-30" id="faqAccordionGeneral2">
                             <div class="accordion-item accordion-style-one">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse27">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#g-collapse7">
                                         How do I contribute to the project?
                                     </button>
                                 </h2>
-                                <div id="collapse27" class="accordion-collapse collapse" data-bs-parent="#faqAccordionRight">
+                                <div id="g-collapse7" class="accordion-collapse collapse" data-bs-parent="#faqAccordionGeneral2">
                                     <div class="accordion-body">
                                         Fork the repository on GitHub, create a feature branch, make your changes, and submit a pull request. Include tests and documentation. See CONTRIBUTING.md for detailed guidelines.
                                     </div>
@@ -655,18 +401,312 @@
 
                             <div class="accordion-item accordion-style-one">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse28">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#g-collapse8">
                                         How do I sponsor the project?
                                     </button>
                                 </h2>
-                                <div id="collapse28" class="accordion-collapse collapse" data-bs-parent="#faqAccordionRight">
+                                <div id="g-collapse8" class="accordion-collapse collapse" data-bs-parent="#faqAccordionGeneral2">
                                     <div class="accordion-body">
                                         Support the project through: 1) GitHub Sponsors (ongoing support), 2) One-time donations on the Donate page, 3) Professional/Enterprise support plans, 4) Spreading the word and contributing code.
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="accordion-item accordion-style-one">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#g-collapse9">
+                                        What data does the browser extension collect?
+                                    </button>
+                                </h2>
+                                <div id="g-collapse9" class="accordion-collapse collapse" data-bs-parent="#faqAccordionGeneral2">
+                                    <div class="accordion-body">
+                                        The AzAd Browser Kit collects only data necessary for functionality (browser history, downloads, active tabs). No personal data is sold. All data stays on your device. See our Privacy Policy for complete details.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item accordion-style-one">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#g-collapse10">
+                                        Do you track my usage?
+                                    </button>
+                                </h2>
+                                <div id="g-collapse10" class="accordion-collapse collapse" data-bs-parent="#faqAccordionGeneral2">
+                                    <div class="accordion-body">
+                                        No usage tracking or analytics are implemented in our tools. We don't monitor how you use the extensions or tools. You can use everything completely anonymously.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item accordion-style-one">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#g-collapse11">
+                                        Do these tools work offline?
+                                    </button>
+                                </h2>
+                                <div id="g-collapse11" class="accordion-collapse collapse" data-bs-parent="#faqAccordionGeneral2">
+                                    <div class="accordion-body">
+                                        Browser extensions require internet connection for active/ongoing features. The image-optimizer works offline for local processing. Forms require internet to submit. Tools don't require external APIs beyond what you configure.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item accordion-style-one">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#g-collapse12">
+                                        Are there rate limits?
+                                    </button>
+                                </h2>
+                                <div id="g-collapse12" class="accordion-collapse collapse" data-bs-parent="#faqAccordionGeneral2">
+                                    <div class="accordion-body">
+                                        No rate limits on our tools themselves. If using Google Apps Script for forms, Google has quotas (see Google Apps Script documentation). Image-optimizer processes as fast as your hardware allows.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <!-- AzAd Browser Kit Section -->
+            <div class="row" style="margin-top: 60px;">
+                <div class="col-lg-12">
+                    <h3 style="text-align: center; margin-bottom: 30px; font-size: 24px; font-weight: 600;">AzAd Browser Kit</h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Browser Kit Left Column -->
+                <div class="col-lg-6">
+                    <div class="faq-style-one-items">
+                        <div class="accordion mt-30" id="faqAccordionBrowser1">
+                            <div class="accordion-item accordion-style-one">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#b-collapse1">
+                                        How do I install AzAd Browser Kit?
+                                    </button>
+                                </h2>
+                                <div id="b-collapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordionBrowser1">
+                                    <div class="accordion-body">
+                                        Visit the browser extension store for your browser (Chrome Web Store, Firefox Add-ons, etc.), search for "AzAd Browser Kit", and click "Add to [Browser]". The extension will install automatically and appear in your extension menu.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item accordion-style-one">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#b-collapse2">
+                                        What browsers does AzAd Browser Kit support?
+                                    </button>
+                                </h2>
+                                <div id="b-collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordionBrowser1">
+                                    <div class="accordion-body">
+                                        AzAd Browser Kit officially supports Chrome, Edge, Firefox, and Opera. Safari support is in development. Check the extension page for your browser to see the latest compatibility information.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item accordion-style-one">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#b-collapse3">
+                                        The extension isn't working. What should I do?
+                                    </button>
+                                </h2>
+                                <div id="b-collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordionBrowser1">
+                                    <div class="accordion-body">
+                                        Try: 1) Refresh the page, 2) Disable and re-enable the extension, 3) Clear extension data and cookies, 4) Check if the site allows extensions, 5) Restart your browser. If issues persist, report on GitHub Issues with your browser version and error details.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Browser Kit Right Column (Empty for alignment) -->
+                <div class="col-lg-6">
+                </div>
+            </div>
+
+            <!-- Image Optimizer Section -->
+            <div class="row" style="margin-top: 60px;">
+                <div class="col-lg-12">
+                    <h3 style="text-align: center; margin-bottom: 30px; font-size: 24px; font-weight: 600;">Image Optimizer</h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Image Optimizer Left Column -->
+                <div class="col-lg-6">
+                    <div class="faq-style-one-items">
+                        <div class="accordion mt-30" id="faqAccordionImage1">
+                            <div class="accordion-item accordion-style-one">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#i-collapse1">
+                                        Do I need Node.js for the image-optimizer?
+                                    </button>
+                                </h2>
+                                <div id="i-collapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordionImage1">
+                                    <div class="accordion-body">
+                                        Yes. The image-optimizer requires Node.js 14+ and npm. Download Node.js from nodejs.org, then run <code>npm install</code> in the image-optimizer folder to set up dependencies.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item accordion-style-one">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#i-collapse2">
+                                        How much can images be compressed?
+                                    </button>
+                                </h2>
+                                <div id="i-collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordionImage1">
+                                    <div class="accordion-body">
+                                        Compression depends on the original format and quality. Typically: PNG files compress 30-70%, JPEG files 20-50%, and WebP conversion provides 40-80% additional savings. See actual results in the image-optimizer output logs.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item accordion-style-one">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#i-collapse3">
+                                        Can I use the image-optimizer in production?
+                                    </button>
+                                </h2>
+                                <div id="i-collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordionImage1">
+                                    <div class="accordion-body">
+                                        Yes! The image-optimizer is production-ready. It's used in live environments and watches for changes automatically. Test it first in a development environment, then deploy to production with confidence.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item accordion-style-one">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#i-collapse4">
+                                        Why is my image not optimizing?
+                                    </button>
+                                </h2>
+                                <div id="i-collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordionImage1">
+                                    <div class="accordion-body">
+                                        Check: 1) Asset folder path is correct in .image-optimizer.json, 2) Image format is supported (PNG, JPG, WebP, SVG, etc.), 3) File has write permissions, 4) Image isn't already optimized, 5) Watch mode is running. Run with <code>--verbose</code> flag for detailed logs.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item accordion-style-one">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#i-collapse5">
+                                        What's the maximum image file size?
+                                    </button>
+                                </h2>
+                                <div id="i-collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordionImage1">
+                                    <div class="accordion-body">
+                                        The image-optimizer can process images up to system memory limits (typically 2-8GB+). No artificial file size limit is enforced. Larger files take longer to process. RAM available on your system is the practical limit.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Optimizer Right Column (Empty for alignment) -->
+                <div class="col-lg-6">
+                </div>
+            </div>
+
+            <!-- Form Handlers & CAPTCHA Section -->
+            <div class="row" style="margin-top: 60px;">
+                <div class="col-lg-12">
+                    <h3 style="text-align: center; margin-bottom: 30px; font-size: 24px; font-weight: 600;">Form Handlers & CAPTCHA</h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Form Handlers Left Column -->
+                <div class="col-lg-6">
+                    <div class="faq-style-one-items">
+                        <div class="accordion mt-30" id="faqAccordionForm1">
+                            <div class="accordion-item accordion-style-one">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f-collapse1">
+                                        How do I set up Google Apps Script for forms?
+                                    </button>
+                                </h2>
+                                <div id="f-collapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordionForm1">
+                                    <div class="accordion-body">
+                                        Visit our form-handlers documentation for a step-by-step guide. You'll need to create a Google Apps Script project, deploy it as a web app, and copy the webhook URL into your form configuration.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item accordion-style-one">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f-collapse2">
+                                        How do I debug the contact form?
+                                    </button>
+                                </h2>
+                                <div id="f-collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordionForm1">
+                                    <div class="accordion-body">
+                                        Check browser console (F12 > Console tab) for JavaScript errors. Verify Google Apps Script endpoint URL is correct. Test form submission by checking Network tab. Enable verbose logging in form-handler.js. Check FORM-SYNC-CHECKLIST.md for verification steps.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item accordion-style-one">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f-collapse3">
+                                        Why is CAPTCHA not showing?
+                                    </button>
+                                </h2>
+                                <div id="f-collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordionForm1">
+                                    <div class="accordion-body">
+                                        Verify: 1) captcha-class.js is loaded, 2) DOM elements have correct IDs (#captchaCheck, #captchaAnswer, etc.), 3) JavaScript isn't throwing errors (check console), 4) CSS isn't hidden (.captcha-box display property), 5) Form ID matches configuration.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item accordion-style-one">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f-collapse4">
+                                        How do I customize the CAPTCHA styling?
+                                    </button>
+                                </h2>
+                                <div id="f-collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordionForm1">
+                                    <div class="accordion-body">
+                                        The CAPTCHA supports Material Design styling through CSS classes and inline styles. You can customize colors, sizing, fonts, and animations. See the CAPTCHA-UI documentation for detailed styling options and examples.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item accordion-style-one">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f-collapse5">
+                                        Is my form data encrypted?
+                                    </button>
+                                </h2>
+                                <div id="f-collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordionForm1">
+                                    <div class="accordion-body">
+                                        Form submissions are sent over HTTPS (encrypted in transit). Data is stored in your Google Drive (if using Google Apps Script). No data is stored on our servers. You control where and how your data is stored.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item accordion-style-one">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f-collapse6">
+                                        Can I delete my submission data?
+                                    </button>
+                                </h2>
+                                <div id="f-collapse6" class="accordion-collapse collapse" data-bs-parent="#faqAccordionForm1">
+                                    <div class="accordion-body">
+                                        Yes. Form submissions are stored in your Google Sheet (if you set that up). You can delete responses directly from your Google Sheet. We don't store submission data on our servers.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Handlers Right Column (Empty for alignment) -->
+                <div class="col-lg-6">
                 </div>
             </div>
 
