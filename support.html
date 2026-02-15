@@ -79,7 +79,10 @@
 
     <!-- Start Header -->
     <header>
+        <!-- Start Navigation -->
         <nav class="navbar mobile-sidenav navbar-box navbar-default validnavs navbar-sticky">
+
+            <!-- Start Top Search -->
             <div class="top-search">
                 <div class="container-xl">
                     <div class="input-group">
@@ -89,19 +92,29 @@
                     </div>
                 </div>
             </div>
+            <!-- End Top Search -->
+
             <div class="container nav-box d-flex justify-content-between align-items-center">
+
+                <!-- Start Header Navigation -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                         <i class="fa fa-bars"></i>
                     </button>
-                    <a class="navbar-brand" href="index.html">
-                        <img src="assets/img/logo/Logo for Light Theme.png" alt="AzAd Logo" style="height: 45px;">
+                    <a class="navbar-brand" href="/">
+                        <img src="assets/img/logo/Logo for Light Theme.png" alt="AzAd Logo" class="logo-light"
+                            style="height: 45px;">
+                        <img src="assets/img/logo/Logo for Dark Theme.png" alt="AzAd Logo" class="logo-dark" style="height: 45px;">
                     </a>
                 </div>
+                <!-- End Header Navigation -->
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                         <i class="fa fa-times"></i>
                     </button>
+
                     <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="projects.html">Projects</a></li>
@@ -109,9 +122,26 @@
                         <li><a href="support.html" class="active">Support</a></li>
                         <li><a href="donation.html">Donate</a></li>
                     </ul>
+                </div><!-- /.navbar-collapse -->
+
+                <div class="nav-right">
+                    <div class="attr-right">
+                        <div class="attr-nav attr-box">
+                            <ul>
+                                <li class="button">
+                                    <a href="donation.html"><span>Support Us</span> <i class="fas fa-heart"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <!-- Overlay screen for menu -->
+            <div class="overlay-screen"></div>
+            <!-- End Overlay screen for menu -->
         </nav>
+        <!-- End Navigation -->
     </header>
     <!-- End Header -->
 
@@ -134,7 +164,7 @@
     <!-- End Breadcrumb -->
 
     <!-- Start Support Plans Section -->
-    <div id="support" class="pricing-style-one-area default-padding bg-light">
+    <div id="support" class="pricing-style-one-area default-padding bg-light" style="margin-top: -50px;">
         <div class="shape-right-top">
             <img src="assets/img/shape/15.png" alt="Image Not Found">
         </div>
@@ -656,14 +686,14 @@
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
                     <div class="footer-items text-center">
-                        <a href="index.html" class="footer-logo">
-                            <img src="assets/img/logo/Logo for Light Theme.png" alt="AzAd Logo" style="height: 50px; margin: 0 auto 20px;">
+                        <a href="/" class="footer-logot">
+                            <img src="assets/img/logo/Logo for Light Theme.png" alt="AzAd Logo"
+                                style="height: 50px; margin: 0 auto 20px;">
                         </a>
-                        <ul class="footer-menu">
+                        <ul class="foter-menu">
                             <li><a href="index.html">Home</a></li>
                             <li><a href="projects.html">Projects</a></li>
                             <li><a href="contact.html">Contact</a></li>
-                            <li><a href="support.html">Support</a></li>
                             <li><a href="donation.html">Donate</a></li>
                         </ul>
                         <p>Copyright &copy; 2026 AzAd. All Rights Reserved</p>
