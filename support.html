@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Support Plans & FAQs - AzAd Tools & Extensions">
+
+    <!-- ========== Page Title ========== -->
+    <title>Support & FAQs - AzAd</title>
+
+    <!-- ========== Favicon Icon ========== -->
+    <link rel="shortcut icon" href="assets/img/logo/icon.jpg" type="image/jpeg">
+
+    <!-- ========== Start Stylesheet ========== -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/magnific-popup.css" rel="stylesheet">
+    <link href="assets/css/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/animate.min.css" rel="stylesheet">
+    <link href="assets/css/validnavs.css" rel="stylesheet">
+    <link href="assets/css/helper.css" rel="stylesheet">
+    <link href="assets/css/unit-test.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/themes.css" rel="stylesheet">
+    <link href="assets/css/global.css" rel="stylesheet">
+    <!-- ========== End Stylesheet ========== -->
+
+    <style>
+        .support-plan-card {
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+            background: #fff;
+        }
+
+        .support-plan-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .support-plan-card.featured {
+            border-color: #667eea;
+            box-shadow: 0 8px 32px rgba(102, 126, 234, 0.2);
+            transform: scale(1.02);
+        }
+
+        .plan-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+        }
+
+        .plan-price {
+            font-size: 28px;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .plan-price-period {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .plan-description {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .plan-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+        }
+
+        .plan-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+            color: #333;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+
+        .plan-features li:before {
+            content: "✓";
+            color: #10b981;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        .plan-features li.disabled {
+            opacity: 0.5;
+        }
+
+        .plan-features li.disabled:before {
+            content: "✗";
+            color: #ef4444;
+        }
+
+        .plan-button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .plan-button.primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .plan-button.primary:hover {
+            background: #5568d3;
+        }
+
+        .plan-button.secondary {
+            background: #f0f0f0;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .plan-button.secondary:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .featured-badge {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-category {
+            margin-bottom: 40px;
+        }
+
+        .faq-category-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            display: inline-block;
+        }
+
+        .faq-item {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: #667eea;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
+        }
+
+        .faq-question {
+            padding: 18px 20px;
+            background: #f8f9fa;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #1a1a1a;
+            user-select: none;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: #f0f0f0;
+            color: #667eea;
+        }
+
+        .faq-question.active {
+            background: #667eea;
+            color: white;
+        }
+
+        .faq-icon {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            background: white;
+            transition: all 0.3s ease;
+            color: #666;
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        .faq-answer.active {
+            padding: 20px;
+            max-height: 500px;
+        }
+
+        .contact-support-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .contact-support-btn:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .comparison-table th {
+            background: #667eea;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 700;
+        }
+
+        .comparison-table td {
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .comparison-table tr:hover {
+            background: #f8f9fa;
+        }
+
+        .comparison-table .feature-name {
+            font-weight: 600;
+            color: #1a1a1a;
+            min-width: 250px;
+        }
+
+        .comparison-table .check {
+            color: #10b981;
+            font-weight: bold;
+        }
+
+        .comparison-table .cross {
+            color: #ef4444;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Start Preloader -->
+    <div class="preloader">
+        <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+            <path id="preloaderSvg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
+        </svg>
+        <div class="preloader-heading">
+            <div class="load-text">
+                <span>L</span>
+                <span>o</span>
+                <span>a</span>
+                <span>d</span>
+                <span>i</span>
+                <span>n</span>
+                <span>g</span>
+            </div>
+        </div>
+    </div>
+    <!-- End Preloader -->
+
+    <!-- Start Header -->
+    <header>
+        <nav class="navbar mobile-sidenav navbar-box navbar-default validnavs navbar-sticky">
+            <div class="top-search">
+                <div class="container-xl">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                        <input type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="container nav-box d-flex justify-content-between align-items-center">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/img/logo/Logo for Light Theme.png" alt="AzAd Logo" style="height: 45px;">
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i class="fa fa-times"></i>
+                    </button>
+                    <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="support.html" class="active">Support</a></li>
+                        <li><a href="donation.html">Donate</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Breadcrumb -->
+    <div class="breadcrumb-area text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
+                    <h1>Support & FAQs</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                            <li class="active">Support</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumb -->
+
+    <!-- Start Support Plans Section -->
+    <div class="support-plans-area default-padding-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+                    <div class="site-heading text-center">
+                        <h2>Choose Your Support Level</h2>
+                        <p>Select a plan that best fits your needs. All plans include access to our comprehensive documentation and community resources.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Support Plans Cards -->
+            <div class="row">
+                <!-- Community Support -->
+                <div class="col-lg-4">
+                    <div class="support-plan-card">
+                        <h3 class="plan-title">Community</h3>
+                        <div class="plan-price">Free<span class="plan-price-period">/month</span></div>
+                        <p class="plan-description">Perfect for individual developers and hobbyists getting started with our tools.</p>
+                        <ul class="plan-features">
+                            <li>GitHub Issues support</li>
+                            <li>Email support (48-72 hrs)</li>
+                            <li>Community forum access</li>
+                            <li>Full documentation</li>
+                            <li>Self-serve guides</li>
+                            <li class="disabled">Priority response</li>
+                            <li class="disabled">Private support</li>
+                            <li class="disabled">Feature requests</li>
+                        </ul>
+                        <button class="plan-button secondary">Get Started</button>
+                    </div>
+                </div>
+
+                <!-- Professional Support (Featured) -->
+                <div class="col-lg-4">
+                    <div class="support-plan-card featured">
+                        <span class="featured-badge">Most Popular</span>
+                        <h3 class="plan-title">Professional</h3>
+                        <div class="plan-price">$15<span class="plan-price-period">/month</span></div>
+                        <p class="plan-description">Ideal for active developers and small teams who need reliable support.</p>
+                        <ul class="plan-features">
+                            <li>Everything in Community</li>
+                            <li>Email support (24 hrs)</li>
+                            <li>Priority issue resolution</li>
+                            <li>Direct contact support</li>
+                            <li>Feature request consideration</li>
+                            <li>Monthly updates</li>
+                            <li>Version notifications</li>
+                            <li class="disabled">SLA guarantees</li>
+                        </ul>
+                        <button class="plan-button primary">Choose Plan</button>
+                    </div>
+                </div>
+
+                <!-- Enterprise Support -->
+                <div class="col-lg-4">
+                    <div class="support-plan-card">
+                        <h3 class="plan-title">Enterprise</h3>
+                        <div class="plan-price">Custom<span class="plan-price-period">/month</span></div>
+                        <p class="plan-description">For companies and teams with mission-critical requirements and custom needs.</p>
+                        <ul class="plan-features">
+                            <li>Everything in Professional</li>
+                            <li>Dedicated support contact</li>
+                            <li>Phone/Slack support (4 hrs)</li>
+                            <li>Custom development options</li>
+                            <li>Priority feature development</li>
+                            <li>SLA guarantees</li>
+                            <li>Quarterly business reviews</li>
+                            <li>Custom training sessions</li>
+                        </ul>
+                        <a href="contact.html" class="plan-button secondary">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comparison Table -->
+            <div class="row" style="margin-top: 60px;">
+                <div class="col-lg-12">
+                    <h3 style="text-align: center; margin-bottom: 30px;">Feature Comparison</h3>
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Community</th>
+                                <th>Professional</th>
+                                <th>Enterprise</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="feature-name">GitHub Issues Support</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Email Support</td>
+                                <td>48-72 hrs</td>
+                                <td>24 hrs</td>
+                                <td>4 hrs</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Phone/Slack Support</td>
+                                <td class="cross">✗</td>
+                                <td class="cross">✗</td>
+                                <td class="check">✓</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Priority Issue Resolution</td>
+                                <td class="cross">✗</td>
+                                <td class="check">✓</td>
+                                <td class="check">✓</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Dedicated Support Contact</td>
+                                <td class="cross">✗</td>
+                                <td class="cross">✗</td>
+                                <td class="check">✓</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Custom Development</td>
+                                <td class="cross">✗</td>
+                                <td class="cross">✗</td>
+                                <td class="check">✓</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">SLA Guarantees</td>
+                                <td class="cross">✗</td>
+                                <td class="cross">✗</td>
+                                <td class="check">✓</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Quarterly Reviews</td>
+                                <td class="cross">✗</td>
+                                <td class="cross">✗</td>
+                                <td class="check">✓</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Support Plans Section -->
+
+    <!-- Start FAQs Section -->
+    <div class="faq-area default-padding bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+                    <div class="site-heading text-center">
+                        <h2>Frequently Asked Questions</h2>
+                        <p>Find answers to common questions about our tools, extensions, and services.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-container">
+
+                <!-- Installation & Setup -->
+                <div class="faq-category">
+                    <h4 class="faq-category-title"><i class="fas fa-download"></i> Installation & Setup</h4>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How do I install AzAd Browser Kit?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            Visit the browser extension store for your browser (Chrome Web Store, Firefox Add-ons, etc.), search for "AzAd Browser Kit", and click "Add to [Browser]". The extension will install automatically and appear in your extension menu.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What browsers does AzAd Browser Kit support?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            AzAd Browser Kit officially supports Chrome, Edge, Firefox, and Opera. Safari support is in development. Check the extension page for your browser to see the latest compatibility information.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Do I need Node.js for the image-optimizer?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            Yes. The image-optimizer requires Node.js 14+ and npm. Download Node.js from nodejs.org, then run <code>npm install</code> in the image-optimizer folder to set up dependencies.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How do I set up Google Apps Script for forms?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            Visit our form-handlers documentation for a step-by-step guide. You'll need to create a Google Apps Script project, deploy it as a web app, and copy the webhook URL into your form configuration.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features & Usage -->
+                <div class="faq-category">
+                    <h4 class="faq-category-title"><i class="fas fa-star"></i> Features & Usage</h4>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What can ASO Suite Pro do?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            ASO Suite Pro is a WordPress admin security toolkit that provides security scanning, vulnerability detection, hardening recommendations, and security monitoring for WordPress sites. Visit asosuitepro.com for detailed features.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How do I customize the CAPTCHA styling?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            The CAPTCHA supports Material Design styling through CSS classes and inline styles. You can customize colors, sizing, fonts, and animations. See the CAPTCHA-UI documentation for detailed styling options and examples.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How much can images be compressed?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            Compression depends on the original format and quality. Typically: PNG files compress 30-70%, JPEG files 20-50%, and WebP conversion provides 40-80% additional savings. See actual results in the image-optimizer output logs.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can I use the image-optimizer in production?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            Yes! The image-optimizer is production-ready. It's used in live environments and watches for changes automatically. Test it first in a development environment, then deploy to production with confidence.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Issues -->
+                <div class="faq-category">
+                    <h4 class="faq-category-title"><i class="fas fa-wrench"></i> Technical Issues</h4>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>The extension isn't working. What should I do?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            Try: 1) Refresh the page, 2) Disable and re-enable the extension, 3) Clear extension data and cookies, 4) Check if the site allows extensions, 5) Restart your browser. If issues persist, report on GitHub Issues with your browser version and error details.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Why is my image not optimizing?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            Check: 1) Asset folder path is correct in .image-optimizer.json, 2) Image format is supported (PNG, JPG, WebP, SVG, etc.), 3) File has write permissions, 4) Image isn't already optimized, 5) Watch mode is running. Run with <code>--verbose</code> flag for detailed logs.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How do I debug the contact form?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            Check browser console (F12 > Console tab) for JavaScript errors. Verify Google Apps Script endpoint URL is correct. Test form submission by checking Network tab. Enable verbose logging in form-handler.js. Check FORM-SYNC-CHECKLIST.md for verification steps.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Why is CAPTCHA not showing?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            Verify: 1) captcha-class.js is loaded, 2) DOM elements have correct IDs (#captchaCheck, #captchaAnswer, etc.), 3) JavaScript isn't throwing errors (check console), 4) CSS isn't hidden (.captcha-box display property), 5) Form ID matches configuration.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Permissions & Privacy -->
+                <div class="faq-category">
+                    <h4 class="faq-category-title"><i class="fas fa-shield-alt"></i> Permissions & Privacy</h4>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What data does the browser extension collect?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            The AzAd Browser Kit collects only data necessary for functionality (browser history, downloads, active tabs). No personal data is sold. All data stays on your device. See our Privacy Policy for complete details.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Is my form data encrypted?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            Form submissions are sent over HTTPS (encrypted in transit). Data is stored in your Google Drive (if using Google Apps Script). No data is stored on our servers. You control where and how your data is stored.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Do you track my usage?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            No usage tracking or analytics are implemented in our tools. We don't monitor how you use the extensions or tools. You can use everything completely anonymously.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can I delete my submission data?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            Yes. Form submissions are stored in your Google Sheet (if you set that up). You can delete responses directly from your Google Sheet. We don't store submission data on our servers.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Compatibility & Limitations -->
+                <div class="faq-category">
+                    <h4 class="faq-category-title"><i class="fas fa-check-circle"></i> Compatibility & Limitations</h4>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Which WordPress versions are compatible?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            ASO Suite Pro supports WordPress 5.0+. For best results, use the latest WordPress version with all security updates. Check the ASO Suite Pro documentation for any version-specific requirements.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Do these tools work offline?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            Browser extensions require internet connection for active/ongoing features. The image-optimizer works offline for local processing. Forms require internet to submit. Tools don't require external APIs beyond what you configure.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What's the maximum image file size?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            The image-optimizer can process images up to system memory limits (typically 2-8GB+). No artificial file size limit is enforced. Larger files take longer to process. RAM available on your system is the practical limit.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Are there rate limits?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            No rate limits on our tools themselves. If using Google Apps Script for forms, Google has quotas (see Google Apps Script documentation). Image-optimizer processes as fast as your hardware allows.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pricing & Licensing -->
+                <div class="faq-category">
+                    <h4 class="faq-category-title"><i class="fas fa-tag"></i> Pricing & Licensing</h4>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Is everything free?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            Most tools are free, including: AzAd Browser Kit, image-optimizer, form handlers, and contact form with CAPTCHA. We offer Community support (free) and paid support plans (Professional/Enterprise) for those who need priority assistance.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can I use these commercially?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            Yes! All tools are provided under MIT License or similar permissive licenses. You can use them in commercial projects, client work, and business applications without restrictions.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can I modify the code?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            Yes, the code is open source. You can modify, adapt, and extend everything for your needs. If you improve the code, consider submitting pull requests back to the project.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Do I need to credit you?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            No credit required, but it's appreciated! You're free to use everything without attribution. If you mention AzAd or link to our project, we'd love that, but it's completely optional.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Support & Contributions -->
+                <div class="faq-category">
+                    <h4 class="faq-category-title"><i class="fas fa-heart"></i> Support & Contributions</h4>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How do I report a bug?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            Report bugs on GitHub Issues. Include: 1) Browser/OS version, 2) Steps to reproduce, 3) Expected vs actual behavior, 4) Screenshots if applicable, 5) Relevant error messages from console.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can I request a feature?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            Yes! Submit feature requests on GitHub Issues, or if you have a Professional/Enterprise plan, we prioritize feature requests. Describe the feature, why you need it, and how it would benefit users.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How do I contribute to the project?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            Fork the repository on GitHub, create a feature branch, make your changes, and submit a pull request. Include tests and documentation. See CONTRIBUTING.md for detailed guidelines.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How do I sponsor the project?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            Support the project through: 1) GitHub Sponsors (ongoing support), 2) One-time donations on the Donate page, 3) Professional/Enterprise support plans, 4) Spreading the word and contributing code.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <p style="font-size: 16px; color: #666; margin-bottom: 20px;">Didn't find your answer?</p>
+                <a href="contact.html" class="contact-support-btn">Contact Our Support Team</a>
+            </div>
+
+        </div>
+    </div>
+    <!-- End FAQs Section -->
+
+    <!-- Start Footer -->
+    <footer class="default-padding bg-cover" style="background-image: url(assets/img/shape/1.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="footer-items text-center">
+                        <a href="index.html" class="footer-logo">
+                            <img src="assets/img/logo/Logo for Light Theme.png" alt="AzAd Logo" style="height: 50px; margin: 0 auto 20px;">
+                        </a>
+                        <ul class="footer-menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="support.html">Support</a></li>
+                            <li><a href="donation.html">Donate</a></li>
+                        </ul>
+                        <p>Copyright &copy; 2026 AzAd. All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- jQuery Frameworks -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/progress-bar.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/magnific-popup.min.js"></script>
+    <script src="assets/js/jquery.waypoints.js"></script>
+    <script src="assets/js/count-to.js"></script>
+    <script src="assets/js/YTPlayer.min.js"></script>
+    <script src="assets/js/validnavs.js"></script>
+    <script src="assets/js/gsap.js"></script>
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <script src="assets/js/jquery.lettering.min.js"></script>
+    <script src="assets/js/jquery.circleType.js"></script>
+    <script src="assets/js/typed.js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- FAQ Accordion Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    const isActive = answer.classList.contains('active');
+                    
+                    // Close all other answers
+                    document.querySelectorAll('.faq-answer.active').forEach(activeAnswer => {
+                        if (activeAnswer !== answer) {
+                            activeAnswer.classList.remove('active');
+                            activeAnswer.previousElementSibling.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current answer
+                    answer.classList.toggle('active');
+                    this.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+
+    <!-- Scroll Top -->
+    <div class="scroll-to-top">
+        <span class="scroll-icon">
+            <i class="fa fa-arrow-up"></i>
+        </span>
+    </div>
+
+    <script src="assets/js/theme-switcher.js"></script>
+
+</body>
+
+</html>
