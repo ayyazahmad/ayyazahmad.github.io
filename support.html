@@ -29,128 +29,6 @@
     <!-- ========== End Stylesheet ========== -->
 
     <style>
-        .support-plan-card {
-            border: 2px solid #e0e0e0;
-            border-radius: 12px;
-            padding: 30px;
-            margin: 20px 0;
-            transition: all 0.3s ease;
-            background: #fff;
-        }
-
-        .support-plan-card:hover {
-            border-color: #667eea;
-            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.15);
-            transform: translateY(-5px);
-        }
-
-        .support-plan-card.featured {
-            border-color: #667eea;
-            box-shadow: 0 8px 32px rgba(102, 126, 234, 0.2);
-            transform: scale(1.02);
-        }
-
-        .plan-title {
-            font-size: 24px;
-            font-weight: 700;
-            color: #1a1a1a;
-            margin-bottom: 15px;
-        }
-
-        .plan-price {
-            font-size: 28px;
-            font-weight: 700;
-            color: #667eea;
-            margin-bottom: 10px;
-        }
-
-        .plan-price-period {
-            font-size: 14px;
-            color: #666;
-        }
-
-        .plan-description {
-            color: #666;
-            font-size: 14px;
-            margin-bottom: 25px;
-            line-height: 1.6;
-        }
-
-        .plan-features {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 25px;
-        }
-
-        .plan-features li {
-            padding: 10px 0;
-            border-bottom: 1px solid #f0f0f0;
-            color: #333;
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-        }
-
-        .plan-features li:before {
-            content: "✓";
-            color: #10b981;
-            font-weight: bold;
-            margin-right: 10px;
-            font-size: 16px;
-        }
-
-        .plan-features li.disabled {
-            opacity: 0.5;
-        }
-
-        .plan-features li.disabled:before {
-            content: "✗";
-            color: #ef4444;
-        }
-
-        .plan-button {
-            width: 100%;
-            padding: 12px;
-            border: none;
-            border-radius: 6px;
-            font-size: 15px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .plan-button.primary {
-            background: #667eea;
-            color: white;
-        }
-
-        .plan-button.primary:hover {
-            background: #5568d3;
-        }
-
-        .plan-button.secondary {
-            background: #f0f0f0;
-            color: #667eea;
-            border: 2px solid #667eea;
-        }
-
-        .plan-button.secondary:hover {
-            background: #667eea;
-            color: white;
-        }
-
-        .featured-badge {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 700;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
 
         .faq-container {
             max-width: 800px;
@@ -254,46 +132,10 @@
             transform: translateY(-2px);
         }
 
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 30px 0;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-        }
-
-        .comparison-table th {
-            background: #667eea;
-            color: white;
-            padding: 15px;
-            text-align: left;
-            font-weight: 700;
-        }
-
-        .comparison-table td {
-            padding: 15px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        .comparison-table tr:hover {
-            background: #f8f9fa;
-        }
-
-        .comparison-table .feature-name {
-            font-weight: 600;
-            color: #1a1a1a;
-            min-width: 250px;
-        }
-
-        .comparison-table .check {
-            color: #10b981;
-            font-weight: bold;
-        }
-
-        .comparison-table .cross {
-            color: #ef4444;
-            font-weight: bold;
+        .per-month {
+            font-size: 14px;
+            font-weight: normal;
+            color: #666;
         }
     </style>
 
@@ -377,145 +219,114 @@
     <!-- End Breadcrumb -->
 
     <!-- Start Support Plans Section -->
-    <div class="support-plans-area default-padding-bottom">
+    <div id="support" class="pricing-style-one-area default-padding bg-light">
+        <div class="shape-right-top">
+            <img src="assets/img/shape/15.png" alt="Image Not Found">
+        </div>
         <div class="container">
             <div class="row">
-                <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+                <div class="col-lg-6 offset-lg-3">
                     <div class="site-heading text-center">
-                        <h2>Choose Your Support Level</h2>
-                        <p>Select a plan that best fits your needs. All plans include access to our comprehensive documentation and community resources.</p>
+                        <h4 class="sub-title">Support</h4>
+                        <h2 class="title">Choose Your Support Level</h2>
                     </div>
                 </div>
             </div>
-
-            <!-- Support Plans Cards -->
+        </div>
+        <div class="container">
             <div class="row">
                 <!-- Community Support -->
-                <div class="col-lg-4">
-                    <div class="support-plan-card">
-                        <h3 class="plan-title">Community</h3>
-                        <div class="plan-price">Free<span class="plan-price-period">/month</span></div>
-                        <p class="plan-description">Perfect for individual developers and hobbyists getting started with our tools.</p>
-                        <ul class="plan-features">
-                            <li>GitHub Issues support</li>
-                            <li>Email support (48-72 hrs)</li>
-                            <li>Community forum access</li>
-                            <li>Full documentation</li>
-                            <li>Self-serve guides</li>
-                            <li class="disabled">Priority response</li>
-                            <li class="disabled">Private support</li>
-                            <li class="disabled">Feature requests</li>
-                        </ul>
-                        <button class="plan-button secondary">Get Started</button>
+                <div class="col-lg-6 pricing-one-single">
+                    <div class="pricing-style-one wow fadeInUp">
+                        <div class="pricing-top">
+                            <div class="right">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="left">
+                                <h4>Community</h4>
+                                <p>For individuals & hobbyists</p>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="price">
+                                <h2>Free</h2>
+                            </div>
+                            <ul>
+                                <li>GitHub Issues support</li>
+                                <li>Email support (48-72 hrs)</li>
+                                <li>Community forum access</li>
+                                <li>Full documentation</li>
+                                <li>Self-serve guides</li>
+                                <li>Community updates</li>
+                            </ul>
+                            <div class="button mt-30">
+                                <a class="btn-style-regular" href="index.html"><span>Get Started</span> <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Professional Support (Featured) -->
-                <div class="col-lg-4">
-                    <div class="support-plan-card featured">
-                        <span class="featured-badge">Most Popular</span>
-                        <h3 class="plan-title">Professional</h3>
-                        <div class="plan-price">$15<span class="plan-price-period">/month</span></div>
-                        <p class="plan-description">Ideal for active developers and small teams who need reliable support.</p>
-                        <ul class="plan-features">
-                            <li>Everything in Community</li>
-                            <li>Email support (24 hrs)</li>
-                            <li>Priority issue resolution</li>
-                            <li>Direct contact support</li>
-                            <li>Feature request consideration</li>
-                            <li>Monthly updates</li>
-                            <li>Version notifications</li>
-                            <li class="disabled">SLA guarantees</li>
-                        </ul>
-                        <button class="plan-button primary">Choose Plan</button>
-                    </div>
-                </div>
-
-                <!-- Enterprise Support -->
-                <div class="col-lg-4">
-                    <div class="support-plan-card">
-                        <h3 class="plan-title">Enterprise</h3>
-                        <div class="plan-price">Custom<span class="plan-price-period">/month</span></div>
-                        <p class="plan-description">For companies and teams with mission-critical requirements and custom needs.</p>
-                        <ul class="plan-features">
-                            <li>Everything in Professional</li>
-                            <li>Dedicated support contact</li>
-                            <li>Phone/Slack support (4 hrs)</li>
-                            <li>Custom development options</li>
-                            <li>Priority feature development</li>
-                            <li>SLA guarantees</li>
-                            <li>Quarterly business reviews</li>
-                            <li>Custom training sessions</li>
-                        </ul>
-                        <a href="contact.html" class="plan-button secondary">Contact Sales</a>
+                <!-- Professional Support -->
+                <div class="col-lg-6 pricing-one-single">
+                    <div class="pricing-style-one wow fadeInUp" data-wow-delay="200ms">
+                        <div class="pricing-top">
+                            <div class="right">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="left">
+                                <h4>Professional</h4>
+                                <p>For teams & active developers</p>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="price">
+                                <h2><sup>$</sup>15<span class="per-month">/month</span></h2>
+                            </div>
+                            <ul>
+                                <li>Everything in Community</li>
+                                <li>Email support (24 hrs)</li>
+                                <li>Priority issue resolution</li>
+                                <li>Direct contact support</li>
+                                <li>Feature request consideration</li>
+                                <li>Monthly updates</li>
+                            </ul>
+                            <div class="button mt-30">
+                                <a class="btn-style-regular btn-border" href="contact.html"><span>Choose Plan</span> <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Comparison Table -->
-            <div class="row" style="margin-top: 60px;">
+            <div class="row" style="margin-top: 40px;">
                 <div class="col-lg-12">
-                    <h3 style="text-align: center; margin-bottom: 30px;">Feature Comparison</h3>
-                    <table class="comparison-table">
-                        <thead>
-                            <tr>
-                                <th>Feature</th>
-                                <th>Community</th>
-                                <th>Professional</th>
-                                <th>Enterprise</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="feature-name">GitHub Issues Support</td>
-                                <td class="check">✓</td>
-                                <td class="check">✓</td>
-                                <td class="check">✓</td>
-                            </tr>
-                            <tr>
-                                <td class="feature-name">Email Support</td>
-                                <td>48-72 hrs</td>
-                                <td>24 hrs</td>
-                                <td>4 hrs</td>
-                            </tr>
-                            <tr>
-                                <td class="feature-name">Phone/Slack Support</td>
-                                <td class="cross">✗</td>
-                                <td class="cross">✗</td>
-                                <td class="check">✓</td>
-                            </tr>
-                            <tr>
-                                <td class="feature-name">Priority Issue Resolution</td>
-                                <td class="cross">✗</td>
-                                <td class="check">✓</td>
-                                <td class="check">✓</td>
-                            </tr>
-                            <tr>
-                                <td class="feature-name">Dedicated Support Contact</td>
-                                <td class="cross">✗</td>
-                                <td class="cross">✗</td>
-                                <td class="check">✓</td>
-                            </tr>
-                            <tr>
-                                <td class="feature-name">Custom Development</td>
-                                <td class="cross">✗</td>
-                                <td class="cross">✗</td>
-                                <td class="check">✓</td>
-                            </tr>
-                            <tr>
-                                <td class="feature-name">SLA Guarantees</td>
-                                <td class="cross">✗</td>
-                                <td class="cross">✗</td>
-                                <td class="check">✓</td>
-                            </tr>
-                            <tr>
-                                <td class="feature-name">Quarterly Reviews</td>
-                                <td class="cross">✗</td>
-                                <td class="cross">✗</td>
-                                <td class="check">✓</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="pricing-style-one">
+                        <div class="pricing-top">
+                            <div class="right">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="left">
+                                <h4>Enterprise</h4>
+                                <p>For mission-critical requirements</p>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="price">
+                                <h2><sup>Custom</sup> Pricing</h2>
+                            </div>
+                            <ul>
+                                <li>Everything in Professional</li>
+                                <li>Dedicated support contact</li>
+                                <li>Phone/Slack support (4 hrs response)</li>
+                                <li>Custom development options</li>
+                                <li>Priority feature development</li>
+                                <li>SLA guarantees • Quarterly reviews • Custom training</li>
+                            </ul>
+                            <div class="button mt-30">
+                                <a class="btn-style-regular btn-border" href="contact.html"><span>Contact Sales</span> <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
